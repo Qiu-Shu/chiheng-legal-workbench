@@ -4,6 +4,8 @@
 
 这是 **2026-10-11 的工程续建快照，不是 Windows 10 正式发行版**。先读 [HANDOFF.md](HANDOFF.md)，再继续实施。现有来源覆盖有限，不代表全国法律完整数据库；任何真实引用仍须核对原文和来源。
 
+公开法库与 Windows 离线恢复资产单独提供在[私有工程恢复附件](https://github.com/Qiu-Shu/chiheng-legal-workbench/releases/tag/win10-recovery-2026-10-11)。新电脑按 [Windows 10 恢复与继续工程](docs/windows10-recovery-from-github.md) 下载、核验、安装，并建立单独的开发目录。Git 克隆仍不包含这些二进制附件。
+
 ## 从哪里接手
 
 - [工程交接与下一步](HANDOFF.md)

@@ -2,6 +2,12 @@
 
 交接日期：2026-10-11。目标仓库：`Qiu-Shu/chiheng-legal-workbench`，须保持私有。
 
+## 同日补充：数据资产另行上传
+
+用户已明确授权上传现有公开法库和迁移资产。[私有恢复附件](https://github.com/Qiu-Shu/chiheng-legal-workbench/releases/tag/win10-recovery-2026-10-11) 的新包为 `chiheng-win10-recovery-2026-10-11.zip`，SHA-256 为 `bd1ae6a1a40aea8d710ef9cb7662938ada49e16d904ecba437984d3eb3f995f3`。请优先按 [Windows 10 恢复与继续工程](docs/windows10-recovery-from-github.md) 操作。下文旧候选仅保留历史定位，不再要求必须通过移动硬盘取得资料。
+
+Git 代码历史仍不收录法库二进制、运行时和依赖文件；这些从 Release 单独下载。新包已重新导出、校验和恢复，Mac 离线619项607通过12跳过、JS12通过；Task4跨平台夹具和Task5原生验收仍未完成。登录凭据、私案、浏览器登录状态和整份Obsidian库未上传。
+
 ## 1. 当前停在哪里
 
 用户把当前工作切换为上传代码、换电脑续建。此快照保留未完成状态，没有为了上传而宣称项目完工。
