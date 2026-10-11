@@ -1,0 +1,19 @@
+interface:
+  display_name: "萌律的法律宝典"
+  short_description: "中国大陆法律 MCP 检索与律师实务"
+  brand_color: "#1F6FEB"
+  default_prompt: "Use $menglu-legal-treasury to research this Chinese mainland legal issue with source-grounded statutes and cases."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "menglu-flk-npc"
+      description: "国家法律法规数据库 MCP"
+      transport: "streamable_http"
+      url: "http://localhost:18062/mcp"
+    - type: "mcp"
+      value: "menglu-rmfyalk"
+      description: "人民法院案例库 MCP"
+      transport: "streamable_http"
+      url: "http://localhost:18061/mcp"
+policy:
+  allow_implicit_invocation: true

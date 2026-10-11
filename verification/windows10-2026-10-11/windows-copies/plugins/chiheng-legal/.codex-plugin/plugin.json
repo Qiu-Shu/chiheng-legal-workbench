@@ -1,0 +1,19 @@
+{
+  "name": "chiheng-legal",
+  "version": "0.1.0",
+  "description": "中国诉讼攻防审查与本机法律资料检索，实验版",
+  "author": {
+    "name": "Local developer"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "持衡·中国诉讼攻防审查",
+    "shortDescription": "三遍审查、来源核验及本机法律检索",
+    "longDescription": "面向中国大陆律师的攻防复核，当前为实验版；资料库有限，真实来源与律师验收状态可追溯。",
+    "developerName": "Local developer",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": "审查附件中的诉讼文书，核对法律来源并分别输出内部审查和拟对外稿。"
+  },
+  "mcpServers": "./.mcp.json"
+}

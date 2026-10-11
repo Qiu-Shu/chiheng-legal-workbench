@@ -1,0 +1,45 @@
+schema_version: '1.0'
+status: planned_not_collected
+notice: '覆盖目标清单不代表数据已经采集、核验或可用于确定法律结论。'
+regions:
+  - 北京
+  - 天津
+  - 河北
+  - 山西
+  - 内蒙古
+  - 辽宁
+  - 吉林
+  - 黑龙江
+  - 上海
+  - 江苏
+  - 浙江
+  - 安徽
+  - 福建
+  - 江西
+  - 山东
+  - 河南
+  - 湖北
+  - 湖南
+  - 广东
+  - 广西
+  - 海南
+  - 重庆
+  - 四川
+  - 贵州
+  - 云南
+  - 西藏
+  - 陕西
+  - 甘肃
+  - 青海
+  - 宁夏
+  - 新疆
+priority_localities: [吉林省, 长春市, 松原市]
+source_categories: [人大法规, 政府规章, 规范性文件, 法院发布, 检察发布, 市场监管, 人社, 住建, 税务, 自然资源, 生态环境, 金融监管, 知识产权, 司法行政]
+business_sources:
+  - {name: 国家企业信用信息公示系统, url: 'https://www.gsxt.gov.cn/', access: requires_live_validation}
+  - {name: 中国执行信息公开网, url: 'https://zxgk.court.gov.cn/', access: requires_live_validation}
+  - {name: 全国企业破产重整案件信息网, url: 'https://pccz.court.gov.cn/pcajxxw/index/xxwsy', access: requires_live_validation}
+  - {name: 信用中国, url: 'https://www.creditchina.gov.cn/', access: requires_live_validation}
+  - {name: 企查查, url: 'https://www.qcc.com/', access: manual_official_export_only}
+  - {name: 天眼查, url: 'https://www.tianyancha.com/', access: manual_official_export_only}
+commercial_api: {enabled: false, reason: '尚无正式API/MCP授权'}

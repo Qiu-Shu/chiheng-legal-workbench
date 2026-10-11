@@ -1,0 +1,18 @@
+schema_version: "1.0"
+name: "持衡·中国诉讼攻防审查"
+description: "面向律师团队的中国大陆诉讼文书攻防复核。优先支持吉林、长春、松原的来源发现，核验法规与证据，模拟最强回应，过滤弱攻击；实际覆盖以资料和测试状态为准。"
+core_skill: "cn-litigation-redteam"
+default_language: "zh-CN"
+starter_prompts:
+  - title: "审查对方文书"
+    prompt: "请使用模式 A 审查附件中的对方文书。先确认我方角色、程序和材料范围，再只保留有依据且能承受回应的意见，并核验官方来源。"
+  - title: "压力测试我的文书"
+    prompt: "请使用模式 B 审查附件中的我方文书。构造最强合法反方意见，指出薄弱点及修复方案，不编造事实或证据。"
+  - title: "检查弱攻击与自认风险"
+    prompt: "请检查附件中的攻击性初稿，删除廉价或自我削弱的观点，标出未经确认的事实承认，并提供内部取舍表。"
+  - title: "核验吉林适用依据"
+    prompt: "请根据实际受理地区和程序，核对全国及吉林相关依据、版本和官方链接；明确长春、松原地方资料的已核验范围和缺口。"
+publication:
+  default_visibility: "private"
+  requires_human_approval: true
+  deploy_in_current_phase: false

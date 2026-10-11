@@ -1,0 +1,438 @@
+{
+  "schema_version": 1,
+  "collection_id": "jilin-traffic-2026-2",
+  "title": "吉林省交通运输厅关于修订《吉林省交通运输行政处罚裁量规则》《吉林省交通运输行政处罚裁量基准》的通知",
+  "publisher": "吉林省交通运输厅",
+  "document_number": "吉交规〔2026〕2号",
+  "region": "CN-JL",
+  "parent_url": "https://xxgk.jl.gov.cn/zcbm/fgw_98037/xxgkmlqy/202607/t20260727_9670745.html",
+  "renda_parent_url": "https://www.jlrd.gov.cn/jlsjk/202608/t20260806_9677309.html",
+  "source_dates": {
+    "metadata_created": "2026-07-23",
+    "metadata_published": "2026-07-27",
+    "body_signature": "2026-07-23"
+  },
+  "notice_body_sha256": "8ff5e08f063b8c3b983c83a321ad795f96bee0a270b7435ff69e3fdf3b8013e6",
+  "notice_comparison": "省政府HTML独立正文；人大主DOCX/PDF仅原件归档，未确认与HTML逐字或版式等同",
+  "attachments": [
+    {
+      "attachment_id": "rule",
+      "number": "1",
+      "url": "https://xxgk.jl.gov.cn/zcbm/fgw_98037/xxgkmlqy/202607/P020260727327347182510.doc",
+      "label": "1.吉林省交通运输行政处罚裁量规则.doc"
+    },
+    {
+      "attachment_id": "2-1",
+      "number": "2-1",
+      "url": "https://xxgk.jl.gov.cn/zcbm/fgw_98037/xxgkmlqy/202607/P020260727327347415415.xlsx",
+      "label": "2-1.吉林省交通运输行政处罚裁量基准（道路运输和城市客运管理）.xlsx"
+    },
+    {
+      "attachment_id": "2-2",
+      "number": "2-2",
+      "url": "https://xxgk.jl.gov.cn/zcbm/fgw_98037/xxgkmlqy/202607/P020260727327347576297.xls",
+      "label": "2-2.吉林省交通运输行政处罚裁量基准（公路路政管理）.xls"
+    },
+    {
+      "attachment_id": "2-3",
+      "number": "2-3",
+      "url": "https://xxgk.jl.gov.cn/zcbm/fgw_98037/xxgkmlqy/202607/P020260727327347677392.xls",
+      "label": "2-3.吉林省交通运输行政处罚裁量基准（地方海事管理）.xls"
+    },
+    {
+      "attachment_id": "2-4",
+      "number": "2-4",
+      "url": "https://xxgk.jl.gov.cn/zcbm/fgw_98037/xxgkmlqy/202607/P020260727327347783233.xls",
+      "label": "2-4.吉林省交通运输行政处罚裁量基准（港口行政管理）.xls"
+    },
+    {
+      "attachment_id": "2-5",
+      "number": "2-5",
+      "url": "https://xxgk.jl.gov.cn/zcbm/fgw_98037/xxgkmlqy/202607/P020260727327347887488.xls",
+      "label": "2-5.吉林省交通运输行政处罚裁量基准（航道行政管理）.xls"
+    },
+    {
+      "attachment_id": "2-6",
+      "number": "2-6",
+      "url": "https://xxgk.jl.gov.cn/zcbm/fgw_98037/xxgkmlqy/202607/P020260727327347975794.xls",
+      "label": "2-6.吉林省交通运输行政处罚裁量基准（水路运输行政管理）.xls"
+    },
+    {
+      "attachment_id": "2-7",
+      "number": "2-7",
+      "url": "https://xxgk.jl.gov.cn/zcbm/fgw_98037/xxgkmlqy/202607/P020260817491867840900.xlsx",
+      "label": "2-7.吉林省交通运输行政处罚裁量基准（交通建设监督管理及其他）.xlsx"
+    },
+    {
+      "attachment_id": "2-8",
+      "number": "2-8",
+      "url": "https://xxgk.jl.gov.cn/zcbm/fgw_98037/xxgkmlqy/202607/P020260727327348173424.xlsx",
+      "label": "2-8.吉林省交通运输行政处罚裁量基准（地方铁路管理）.xlsx"
+    }
+  ],
+  "records": [
+    {
+      "id": "notice",
+      "attachment_id": "notice",
+      "title": "吉林省交通运输厅关于修订《吉林省交通运输行政处罚裁量规则》《吉林省交通运输行政处罚裁量基准》的通知",
+      "format": "html",
+      "sha256": "afd9dd1c950a054e2313b61ab0ef475b3ed13403aa7a947c9ced69b4bdf653c1",
+      "sources": [
+        {
+          "url": "https://xxgk.jl.gov.cn/zcbm/fgw_98037/xxgkmlqy/202607/t20260727_9670745.html",
+          "parent_url": "https://xxgk.jl.gov.cn/zcbm/fgw_98037/xxgkmlqy/202607/t20260727_9670745.html",
+          "parent_number": null,
+          "link_label": "吉林省交通运输厅关于修订《吉林省交通运输行政处罚裁量规则》《吉林省交通运输行政处罚裁量基准》的通知",
+          "acquired_at": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "id": "rule",
+      "attachment_id": "rule",
+      "title": "吉林省交通运输行政处罚裁量规则",
+      "format": "doc",
+      "sha256": "f1e45b22ae017df5f10c215124b764d7b773ea3f39efa6e8bd13fe7405b9c96d",
+      "internal_number": null,
+      "internal_title": "吉林省交通运输行政处罚裁量规则",
+      "sources": [
+        {
+          "url": "https://www.jlrd.gov.cn/jlsjk/202608/P020260806339633285860.doc",
+          "parent_url": "https://www.jlrd.gov.cn/jlsjk/202608/t20260806_9677309.html",
+          "parent_number": "1",
+          "link_label": "附件1裁量规则.doc",
+          "acquired_at": "2026-09-28"
+        },
+        {
+          "url": "https://xxgk.jl.gov.cn/zcbm/fgw_98037/xxgkmlqy/202607/P020260727327347182510.doc",
+          "parent_url": "https://xxgk.jl.gov.cn/zcbm/fgw_98037/xxgkmlqy/202607/t20260727_9670745.html",
+          "parent_number": "1",
+          "link_label": "1.吉林省交通运输行政处罚裁量规则.doc",
+          "acquired_at": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "id": "2-1",
+      "attachment_id": "2-1",
+      "title": "吉林省交通运输行政处罚裁量基准（道路运输和城市客运管理）",
+      "format": "xlsx",
+      "sha256": "fb57f44caeb05e11c44fdd151cd3ee965dd0e428af3297760d3121efae30a6df",
+      "internal_number": "附件2—1",
+      "internal_title": "吉林省交通运输行政处罚裁量基准（道路运输和城市客运管理）",
+      "sources": [
+        {
+          "url": "https://www.jlrd.gov.cn/jlsjk/202608/P020260806339633416643.xlsx",
+          "parent_url": "https://www.jlrd.gov.cn/jlsjk/202608/t20260806_9677309.html",
+          "parent_number": "2-1",
+          "link_label": "附件2-1道路运输和城市客运管理（2026版）.xlsx",
+          "acquired_at": "2026-09-28"
+        },
+        {
+          "url": "https://xxgk.jl.gov.cn/zcbm/fgw_98037/xxgkmlqy/202607/P020260727327347415415.xlsx",
+          "parent_url": "https://xxgk.jl.gov.cn/zcbm/fgw_98037/xxgkmlqy/202607/t20260727_9670745.html",
+          "parent_number": "2-1",
+          "link_label": "2-1.吉林省交通运输行政处罚裁量基准（道路运输和城市客运管理）.xlsx",
+          "acquired_at": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "id": "2-2",
+      "attachment_id": "2-2",
+      "title": "吉林省交通运输行政处罚裁量基准（公路路政管理）",
+      "format": "xls",
+      "sha256": "fb163cf8da6166ebfd841c56f1c62361fd64c0c5bc26f8d54813cb5d6a07eef1",
+      "internal_number": "附件2-2",
+      "internal_title": "吉林省交通运输行政处罚裁量基准（公路路政管理）",
+      "sources": [
+        {
+          "url": "https://www.jlrd.gov.cn/jlsjk/202608/P020260806339633523848.xls",
+          "parent_url": "https://www.jlrd.gov.cn/jlsjk/202608/t20260806_9677309.html",
+          "parent_number": "2-2",
+          "link_label": "附件2-2公路路政管理（2026版）.xls",
+          "acquired_at": "2026-09-28"
+        },
+        {
+          "url": "https://xxgk.jl.gov.cn/zcbm/fgw_98037/xxgkmlqy/202607/P020260727327347576297.xls",
+          "parent_url": "https://xxgk.jl.gov.cn/zcbm/fgw_98037/xxgkmlqy/202607/t20260727_9670745.html",
+          "parent_number": "2-2",
+          "link_label": "2-2.吉林省交通运输行政处罚裁量基准（公路路政管理）.xls",
+          "acquired_at": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "id": "2-3",
+      "attachment_id": "2-3",
+      "title": "吉林省交通运输行政处罚裁量基准（地方海事管理）",
+      "format": "xls",
+      "sha256": "39ddc517855ff28130c1bcda7fcb35886c8e68a0a64281ba6ea863233b304a78",
+      "internal_number": "附件2-3",
+      "internal_title": "吉林省交通运输行政处罚裁量基准（地方海事管理）",
+      "sources": [
+        {
+          "url": "https://www.jlrd.gov.cn/jlsjk/202608/P020260806339633633218.xls",
+          "parent_url": "https://www.jlrd.gov.cn/jlsjk/202608/t20260806_9677309.html",
+          "parent_number": "2-3",
+          "link_label": "附件2-3地方海事管理（2026版）.xls",
+          "acquired_at": "2026-09-28"
+        },
+        {
+          "url": "https://xxgk.jl.gov.cn/zcbm/fgw_98037/xxgkmlqy/202607/P020260727327347677392.xls",
+          "parent_url": "https://xxgk.jl.gov.cn/zcbm/fgw_98037/xxgkmlqy/202607/t20260727_9670745.html",
+          "parent_number": "2-3",
+          "link_label": "2-3.吉林省交通运输行政处罚裁量基准（地方海事管理）.xls",
+          "acquired_at": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "id": "2-4",
+      "attachment_id": "2-4",
+      "title": "吉林省交通运输行政处罚裁量基准（港口行政管理）",
+      "format": "xls",
+      "sha256": "3d472e31d50f707e4a05ab13dfdb487d98a8b374b8bb0b14e934ca415dc21682",
+      "internal_number": "附件2-4",
+      "internal_title": "吉林省交通运输行政处罚裁量基准（港口行政管理）",
+      "sources": [
+        {
+          "url": "https://www.jlrd.gov.cn/jlsjk/202608/P020260806339633796375.xls",
+          "parent_url": "https://www.jlrd.gov.cn/jlsjk/202608/t20260806_9677309.html",
+          "parent_number": "2-4",
+          "link_label": "附件2-4港口行政管理（2026版）.xls",
+          "acquired_at": "2026-09-28"
+        },
+        {
+          "url": "https://xxgk.jl.gov.cn/zcbm/fgw_98037/xxgkmlqy/202607/P020260727327347783233.xls",
+          "parent_url": "https://xxgk.jl.gov.cn/zcbm/fgw_98037/xxgkmlqy/202607/t20260727_9670745.html",
+          "parent_number": "2-4",
+          "link_label": "2-4.吉林省交通运输行政处罚裁量基准（港口行政管理）.xls",
+          "acquired_at": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "id": "2-5",
+      "attachment_id": "2-5",
+      "title": "吉林省交通运输行政处罚裁量基准（航道行政管理）",
+      "format": "xls",
+      "sha256": "c4b761d77df7587b1d7b362c3e9da91dd5e061bd84b64a38f0bbf961777f3209",
+      "internal_number": "附件2-5",
+      "internal_title": "吉林省交通运输行政处罚裁量基准（航道行政管理）",
+      "sources": [
+        {
+          "url": "https://www.jlrd.gov.cn/jlsjk/202608/P020260806339633903569.xls",
+          "parent_url": "https://www.jlrd.gov.cn/jlsjk/202608/t20260806_9677309.html",
+          "parent_number": "2-5",
+          "link_label": "附件2-5航道行政管理（2026版）.xls",
+          "acquired_at": "2026-09-28"
+        },
+        {
+          "url": "https://xxgk.jl.gov.cn/zcbm/fgw_98037/xxgkmlqy/202607/P020260727327347887488.xls",
+          "parent_url": "https://xxgk.jl.gov.cn/zcbm/fgw_98037/xxgkmlqy/202607/t20260727_9670745.html",
+          "parent_number": "2-5",
+          "link_label": "2-5.吉林省交通运输行政处罚裁量基准（航道行政管理）.xls",
+          "acquired_at": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "id": "2-6",
+      "attachment_id": "2-6",
+      "title": "吉林省交通运输行政处罚裁量基准（水路运输行政管理）",
+      "format": "xls",
+      "sha256": "ccc57a97da3d3be87df42f55dadedc9d0f6bd920ef80147246783faebd54c176",
+      "internal_number": "附件2-6",
+      "internal_title": "吉林省交通运输行政处罚裁量基准（水路运输行政管理）",
+      "sources": [
+        {
+          "url": "https://www.jlrd.gov.cn/jlsjk/202608/P020260806339634021553.xls",
+          "parent_url": "https://www.jlrd.gov.cn/jlsjk/202608/t20260806_9677309.html",
+          "parent_number": "2-6",
+          "link_label": "附件2-6水路运输行政管理（2026版）.xls",
+          "acquired_at": "2026-09-28"
+        },
+        {
+          "url": "https://xxgk.jl.gov.cn/zcbm/fgw_98037/xxgkmlqy/202607/P020260727327347975794.xls",
+          "parent_url": "https://xxgk.jl.gov.cn/zcbm/fgw_98037/xxgkmlqy/202607/t20260727_9670745.html",
+          "parent_number": "2-6",
+          "link_label": "2-6.吉林省交通运输行政处罚裁量基准（水路运输行政管理）.xls",
+          "acquired_at": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "id": "2-7",
+      "attachment_id": "2-7",
+      "title": "吉林省交通运输行政处罚裁量基准（交通建设监督管理及其他）",
+      "format": "xlsx",
+      "sha256": "8c1b11d3e3d14568ec5911a6ed29fad376c42dc3b4dccbbe7308e0eb57bf54c4",
+      "internal_number": "附件2-7",
+      "internal_title": "吉林省交通运输行政处罚裁量基准（交通建设监督管理及其他）",
+      "sources": [
+        {
+          "url": "https://www.jlrd.gov.cn/jlsjk/202608/P020260806339634139468.xlsx",
+          "parent_url": "https://www.jlrd.gov.cn/jlsjk/202608/t20260806_9677309.html",
+          "parent_number": "2-7",
+          "link_label": "附件2-7交通建设监督管理及其他（2026版）.xlsx",
+          "acquired_at": "2026-09-28"
+        }
+      ],
+      "differences": [
+        {
+          "sheet": "Sheet1",
+          "coordinate": "C55",
+          "old_url": "https://www.jlrd.gov.cn/jlsjk/202608/P020260806339634139468.xlsx",
+          "new_url": "https://xxgk.jl.gov.cn/zcbm/fgw_98037/xxgkmlqy/202607/P020260817491867840900.xlsx",
+          "old_sha256": "8c1b11d3e3d14568ec5911a6ed29fad376c42dc3b4dccbbe7308e0eb57bf54c4",
+          "new_sha256": "fcb84ac555e70bdecde03f886e1f713778b90a7af1459c8c58007c3213edf75a",
+          "old_excerpt": "投标保证金不与退还",
+          "new_excerpt": "投标保证金不予退还",
+          "scope": "单元格值/类型及合并范围比较；不代表全格式、显示效果或法律效力相同",
+          "resolution": "保留双方原文，引用时人工审阅"
+        }
+      ]
+    },
+    {
+      "id": "2-8",
+      "attachment_id": "2-8",
+      "title": "吉林省交通运输行政处罚裁量基准（地方铁路管理）",
+      "format": "xlsx",
+      "sha256": "f71364c1a92d53900005acf22a23682a8aa5a8601bb9cd06b25f1d73d1266d5e",
+      "internal_number": "附件2-8",
+      "internal_title": "吉林省交通运输行政处罚裁量基准（地方铁路管理）",
+      "sources": [
+        {
+          "url": "https://www.jlrd.gov.cn/jlsjk/202608/P020260806339634275068.xlsx",
+          "parent_url": "https://www.jlrd.gov.cn/jlsjk/202608/t20260806_9677309.html",
+          "parent_number": "2-8",
+          "link_label": "附件2-8铁路交通（2026版）.xlsx",
+          "acquired_at": "2026-09-28"
+        }
+      ],
+      "differences": [
+        {
+          "sheet": "Sheet1",
+          "coordinate": "A1",
+          "old_url": "https://www.jlrd.gov.cn/jlsjk/202608/P020260806339634275068.xlsx",
+          "new_url": "https://xxgk.jl.gov.cn/zcbm/fgw_98037/xxgkmlqy/202607/P020260727327348173424.xlsx",
+          "old_sha256": "f71364c1a92d53900005acf22a23682a8aa5a8601bb9cd06b25f1d73d1266d5e",
+          "new_sha256": "8ad896d95d2ee310de047d7d35201bb6d588bcffe045a836d720e1c9f33ea982",
+          "old_value": "附件2-8",
+          "new_value": "附件2-7",
+          "scope": "单元格值/类型及合并范围比较；不代表全格式、显示效果或法律效力相同",
+          "resolution": "保留双方原文，引用时人工审阅"
+        }
+      ]
+    },
+    {
+      "id": "2-7-government",
+      "attachment_id": "2-7",
+      "title": "吉林省交通运输行政处罚裁量基准（交通建设监督管理及其他）",
+      "format": "xlsx",
+      "sha256": "fcb84ac555e70bdecde03f886e1f713778b90a7af1459c8c58007c3213edf75a",
+      "internal_number": "附件2-7",
+      "internal_title": "吉林省交通运输行政处罚裁量基准（交通建设监督管理及其他）",
+      "sources": [
+        {
+          "url": "https://xxgk.jl.gov.cn/zcbm/fgw_98037/xxgkmlqy/202607/P020260817491867840900.xlsx",
+          "parent_url": "https://xxgk.jl.gov.cn/zcbm/fgw_98037/xxgkmlqy/202607/t20260727_9670745.html",
+          "parent_number": "2-7",
+          "link_label": "2-7.吉林省交通运输行政处罚裁量基准（交通建设监督管理及其他）.xlsx",
+          "acquired_at": "2026-10-03"
+        }
+      ],
+      "differences": [
+        {
+          "sheet": "Sheet1",
+          "coordinate": "C55",
+          "old_url": "https://www.jlrd.gov.cn/jlsjk/202608/P020260806339634139468.xlsx",
+          "new_url": "https://xxgk.jl.gov.cn/zcbm/fgw_98037/xxgkmlqy/202607/P020260817491867840900.xlsx",
+          "old_sha256": "8c1b11d3e3d14568ec5911a6ed29fad376c42dc3b4dccbbe7308e0eb57bf54c4",
+          "new_sha256": "fcb84ac555e70bdecde03f886e1f713778b90a7af1459c8c58007c3213edf75a",
+          "old_excerpt": "投标保证金不与退还",
+          "new_excerpt": "投标保证金不予退还",
+          "scope": "单元格值/类型及合并范围比较；不代表全格式、显示效果或法律效力相同",
+          "resolution": "保留双方原文，引用时人工审阅"
+        }
+      ]
+    },
+    {
+      "id": "2-8-government",
+      "attachment_id": "2-8",
+      "title": "吉林省交通运输行政处罚裁量基准（地方铁路管理）",
+      "format": "xlsx",
+      "sha256": "8ad896d95d2ee310de047d7d35201bb6d588bcffe045a836d720e1c9f33ea982",
+      "internal_number": "附件2-7",
+      "internal_title": "吉林省交通运输行政处罚裁量基准（地方铁路管理）",
+      "sources": [
+        {
+          "url": "https://xxgk.jl.gov.cn/zcbm/fgw_98037/xxgkmlqy/202607/P020260727327348173424.xlsx",
+          "parent_url": "https://xxgk.jl.gov.cn/zcbm/fgw_98037/xxgkmlqy/202607/t20260727_9670745.html",
+          "parent_number": "2-8",
+          "link_label": "2-8.吉林省交通运输行政处罚裁量基准（地方铁路管理）.xlsx",
+          "acquired_at": "2026-10-03"
+        }
+      ],
+      "differences": [
+        {
+          "sheet": "Sheet1",
+          "coordinate": "A1",
+          "old_url": "https://www.jlrd.gov.cn/jlsjk/202608/P020260806339634275068.xlsx",
+          "new_url": "https://xxgk.jl.gov.cn/zcbm/fgw_98037/xxgkmlqy/202607/P020260727327348173424.xlsx",
+          "old_sha256": "f71364c1a92d53900005acf22a23682a8aa5a8601bb9cd06b25f1d73d1266d5e",
+          "new_sha256": "8ad896d95d2ee310de047d7d35201bb6d588bcffe045a836d720e1c9f33ea982",
+          "old_value": "附件2-8",
+          "new_value": "附件2-7",
+          "scope": "单元格值/类型及合并范围比较；不代表全格式、显示效果或法律效力相同",
+          "resolution": "保留双方原文，引用时人工审阅"
+        }
+      ]
+    }
+  ],
+  "archives": [
+    {
+      "id": "renda-parent",
+      "format": "html",
+      "sha256": "9c1a6e4ec8f3195fdce7a3b686e2df10b64d7528d6e175603e08766534f226e5",
+      "sources": [
+        {
+          "url": "https://www.jlrd.gov.cn/jlsjk/202608/t20260806_9677309.html",
+          "parent_url": "https://www.jlrd.gov.cn/jlsjk/202608/t20260806_9677309.html",
+          "parent_number": null,
+          "link_label": "吉林省交通运输厅关于修订《吉林省交通运输行政处罚裁量规则》《吉林省交通运输行政处罚裁量基准》的通知",
+          "acquired_at": "2026-09-28"
+        }
+      ]
+    },
+    {
+      "id": "notice-docx",
+      "format": "docx",
+      "sha256": "af55f709abf03e685e8861b902c6810ab6ccc379c6b5974d34b6ec22d2129816",
+      "sources": [
+        {
+          "url": "https://www.jlrd.gov.cn/jlsjk/202608/P020260806339633018670.docx",
+          "parent_url": "https://www.jlrd.gov.cn/jlsjk/202608/t20260806_9677309.html",
+          "parent_number": null,
+          "link_label": "正式发文.docx",
+          "acquired_at": "2026-09-28"
+        }
+      ]
+    },
+    {
+      "id": "notice-pdf",
+      "format": "pdf",
+      "sha256": "84c39b4b6ff71857baefaa512c4a88d2185edd511d9d317d71a2e4623d26a197",
+      "sources": [
+        {
+          "url": "https://www.jlrd.gov.cn/jlsjk/202608/P020260806339633190750.pdf",
+          "parent_url": "https://www.jlrd.gov.cn/jlsjk/202608/t20260806_9677309.html",
+          "parent_number": null,
+          "link_label": "正式发文.pdf",
+          "acquired_at": "2026-09-28"
+        }
+      ]
+    }
+  ]
+}

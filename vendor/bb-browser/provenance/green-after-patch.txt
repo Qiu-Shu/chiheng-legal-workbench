@@ -1,0 +1,20 @@
+2026-10-09: boundary-check.mjs against installed patched files.
+PASS single --help works without Chrome
+PASS --help with daemon start cannot bypass unavailable Chrome
+PASS single -h works without Chrome
+PASS -h with daemon start cannot bypass unavailable Chrome
+PASS single --version works without Chrome
+PASS --version with daemon start cannot bypass unavailable Chrome
+PASS single -v works without Chrome
+PASS -v with daemon start cannot bypass unavailable Chrome
+PASS normal read fails when dedicated Chrome is absent
+PASS normal read reaches CLI when dedicated Chrome is available
+PASS explicit unavailable/invalid CDP fails closed: http://127.0.0.1:19224
+PASS explicit unavailable/invalid CDP fails closed: invalid-url
+PASS explicit unavailable/invalid CDP fails closed: http://127.0.0.1
+PASS reachable explicit dedicated CDP remains selected
+PASS no explicit CDP retains upstream explicit-port behavior
+RESULT installed: 15 passed, 0 failed
+Exit code: 0
+sh -n wrapper: exit 0
+node --check installed cli.js: exit 0

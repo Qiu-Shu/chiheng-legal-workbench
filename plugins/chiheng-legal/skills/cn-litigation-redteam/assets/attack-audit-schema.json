@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/cn-litigation-redteam/attack-audit-schema.json",
+  "title": "持衡攻击点审计记录",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "attack_id",
+    "target_claim",
+    "requested_legal_effect",
+    "fact_ids",
+    "evidence_refs",
+    "law_fragment_refs",
+    "case_refs",
+    "burden_holder",
+    "burden_rule_ref",
+    "strongest_reply",
+    "response_summary",
+    "failure_mode_results",
+    "adverse_authorities",
+    "disposition",
+    "disposition_reason",
+    "materiality",
+    "unresolved_items",
+    "admission_review_ids",
+    "external_use_status"
+  ],
+  "properties": {
+    "attack_id": {"type": "string", "minLength": 1},
+    "target_claim": {"type": "string", "minLength": 1},
+    "requested_legal_effect": {"type": ["string", "null"]},
+    "fact_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "evidence_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "law_fragment_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "case_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "burden_holder": {"type": ["string", "null"]},
+    "burden_rule_ref": {"type": ["string", "null"]},
+    "strongest_reply": {"type": "string"},
+    "response_summary": {"type": ["string", "null"]},
+    "failure_mode_results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["mode_id", "result", "note"],
+        "properties": {
+          "mode_id": {"type": "string"},
+          "result": {"enum": ["pass", "fail", "not_applicable", "needs_review"]},
+          "note": {"type": "string"}
+        }
+      }
+    },
+    "adverse_authorities": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "disposition": {"enum": ["保留", "限定保留", "待补证", "待核法", "删除", "需律师决策"]},
+    "disposition_reason": {"type": "string", "minLength": 1},
+    "materiality": {"enum": ["decisive", "major", "supporting", "minor", "unknown"]},
+    "unresolved_items": {"type": "array", "items": {"type": "string"}},
+    "admission_review_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "external_use_status": {"enum": ["blocked", "internal_only", "eligible_after_lawyer_review", "approved_by_record"]}
+  }
+}

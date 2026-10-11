@@ -1,0 +1,202 @@
+schema_version: "1.0"
+observed_at: "2026-09-23"
+notice: "研究种子，不是已建成数据库；每次正式用途须重新核验具体原文、版本和适用条件。"
+sources:
+  - source_id: "CN-NPC-LAW-DB"
+    name: "国家法律法规数据库"
+    publisher: "全国人民代表大会常务委员会"
+    entry_url: "https://flk.npc.gov.cn/"
+    identity_status: "official_entry_identified"
+    identity_evidence_url: "https://www.npc.gov.cn/"
+    content_types: ["law", "regulation", "judicial_interpretation", "local_regulation"]
+    regions: ["CN"]
+    access_status: "access_failed_in_plan_research"
+    access_notes: "入口在方案研究时未读通；不代表内容不存在。"
+    last_success_at: null
+    terms_review: "pending_operator_review"
+    robots_review: "pending_operator_review"
+    approved_fetch_modes: []
+    publication_rights: "pending_review"
+    redistribution_policy: "metadata_and_link_only_until_reviewed"
+    review_state: "research_seed_only"
+    reviewer: null
+  - source_id: "CN-SPC-PUBLISH"
+    name: "最高人民法院权威发布"
+    publisher: "最高人民法院"
+    entry_url: "https://www.court.gov.cn/index.html"
+    identity_status: "official_publisher_page_read"
+    identity_evidence_url: "https://www.court.gov.cn/index.html"
+    content_types: ["judicial_interpretation", "judicial_document", "case", "official_explanation"]
+    regions: ["CN"]
+    access_status: "entry_read_in_plan_research"
+    access_notes: "具体文件必须逐篇核验，主页不能替代原文。"
+    last_success_at: null
+    terms_review: "pending_operator_review"
+    robots_review: "pending_operator_review"
+    approved_fetch_modes: []
+    publication_rights: "pending_review"
+    redistribution_policy: "metadata_and_link_only_until_reviewed"
+    review_state: "research_seed_only"
+    reviewer: null
+  - source_id: "CN-SPC-EVIDENCE-2019-PAGE"
+    name: "最高人民法院关于民事诉讼证据的若干规定（2019年修正发布页）"
+    publisher: "最高人民法院"
+    entry_url: "https://www.court.gov.cn/fabu/xiangqing/212721.html"
+    identity_status: "official_publisher_page_read"
+    identity_evidence_url: "https://www.court.gov.cn/index.html"
+    content_types: ["judicial_interpretation"]
+    regions: ["CN"]
+    access_status: "content_read_in_plan_research"
+    access_notes: "只表示方案编制时读到页面；当前适用版本仍须复核。"
+    last_success_at: null
+    terms_review: "pending_operator_review"
+    robots_review: "pending_operator_review"
+    approved_fetch_modes: []
+    publication_rights: "pending_review"
+    redistribution_policy: "metadata_and_link_only_until_reviewed"
+    review_state: "research_seed_only"
+    reviewer: null
+  - source_id: "CN-SPC-GUIDANCE-STATUS"
+    name: "最高人民法院关于部分指导性案例不再参照的通知"
+    publisher: "最高人民法院"
+    entry_url: "https://www.court.gov.cn/fabu/xiangqing/508031.html"
+    identity_status: "official_publisher_page_read"
+    identity_evidence_url: "https://www.court.gov.cn/index.html"
+    content_types: ["judicial_document"]
+    regions: ["CN"]
+    access_status: "content_read_in_plan_research"
+    access_notes: "用于测试参照状态与原裁判效力分离。"
+    last_success_at: null
+    terms_review: "pending_operator_review"
+    robots_review: "pending_operator_review"
+    approved_fetch_modes: []
+    publication_rights: "pending_review"
+    redistribution_policy: "metadata_and_link_only_until_reviewed"
+    review_state: "research_seed_only"
+    reviewer: null
+  - source_id: "CN-COURT-CASE-DB"
+    name: "人民法院案例库"
+    publisher: "最高人民法院"
+    entry_url: "https://rmfyalk.court.gov.cn/"
+    identity_status: "official_entry_identified"
+    identity_evidence_url: "https://www.court.gov.cn/index.html"
+    content_types: ["guiding_case", "reference_case"]
+    regions: ["CN"]
+    access_status: "entry_read_in_plan_research"
+    access_notes: "登录、详情和批量使用条件须另核；摘要不是全文。"
+    last_success_at: null
+    terms_review: "pending_operator_review"
+    robots_review: "pending_operator_review"
+    approved_fetch_modes: []
+    publication_rights: "pending_review"
+    redistribution_policy: "metadata_and_link_only_until_reviewed"
+    review_state: "research_seed_only"
+    reviewer: null
+  - source_id: "CN-COURT-JUDGMENTS"
+    name: "中国裁判文书网"
+    publisher: "最高人民法院"
+    entry_url: "https://wenshu.court.gov.cn/"
+    identity_status: "official_entry_identified"
+    identity_evidence_url: "https://www.court.gov.cn/index.html"
+    content_types: ["judgment"]
+    regions: ["CN"]
+    access_status: "entry_only_not_fetched"
+    access_notes: "不得假定存在无需授权的公共批量接口。"
+    last_success_at: null
+    terms_review: "pending_operator_review"
+    robots_review: "pending_operator_review"
+    approved_fetch_modes: []
+    publication_rights: "pending_review"
+    redistribution_policy: "metadata_and_link_only_until_reviewed"
+    review_state: "research_seed_only"
+    reviewer: null
+  - source_id: "CN-JL-NPC"
+    name: "吉林省人民代表大会常务委员会"
+    publisher: "吉林省人民代表大会常务委员会"
+    entry_url: "https://www.jlrd.gov.cn/"
+    identity_status: "candidate_official_entry"
+    identity_evidence_url: "https://www.jlrd.gov.cn/"
+    content_types: ["local_regulation"]
+    regions: ["CN-JL"]
+    access_status: "access_failed_in_plan_research"
+    access_notes: "尚未完成法规栏目、修改废止信息和正文核验。"
+    last_success_at: null
+    terms_review: "pending_operator_review"
+    robots_review: "pending_operator_review"
+    approved_fetch_modes: []
+    publication_rights: "pending_review"
+    redistribution_policy: "metadata_and_link_only_until_reviewed"
+    review_state: "research_seed_only"
+    reviewer: null
+  - source_id: "CN-JL-GOV"
+    name: "吉林省人民政府"
+    publisher: "吉林省人民政府"
+    entry_url: "https://www.jl.gov.cn/"
+    identity_status: "candidate_official_entry"
+    identity_evidence_url: "https://www.jl.gov.cn/"
+    content_types: ["local_government_rule", "normative_document"]
+    regions: ["CN-JL"]
+    access_status: "partial_entry_observation"
+    access_notes: "部分页面可定位，主入口不稳定；不能宣称法规库可用。"
+    last_success_at: null
+    terms_review: "pending_operator_review"
+    robots_review: "pending_operator_review"
+    approved_fetch_modes: []
+    publication_rights: "pending_review"
+    redistribution_policy: "metadata_and_link_only_until_reviewed"
+    review_state: "research_seed_only"
+    reviewer: null
+  - source_id: "CN-JL-HIGH-COURT"
+    name: "吉林省高级人民法院"
+    publisher: "吉林省高级人民法院"
+    entry_url: "https://jlfy.e-court.gov.cn/"
+    identity_status: "official_backlink_confirmed"
+    identity_evidence_url: "https://www.court.gov.cn/index.html"
+    content_types: ["judicial_document", "case"]
+    regions: ["CN-JL"]
+    access_status: "tool_access_failed"
+    access_notes: "最高法导航确认；目标站点在方案研究时访问超时。"
+    last_success_at: null
+    terms_review: "pending_operator_review"
+    robots_review: "pending_operator_review"
+    approved_fetch_modes: []
+    publication_rights: "pending_review"
+    redistribution_policy: "metadata_and_link_only_until_reviewed"
+    review_state: "research_seed_only"
+    reviewer: null
+  - source_id: "CN-JL-CC-GOV"
+    name: "长春市人民政府"
+    publisher: "长春市人民政府"
+    entry_url: "https://www.changchun.gov.cn/"
+    identity_status: "candidate_official_entry"
+    identity_evidence_url: "https://www.changchun.gov.cn/"
+    content_types: ["local_government_rule", "normative_document"]
+    regions: ["CN-JL-CC"]
+    access_status: "access_failed_in_plan_research"
+    access_notes: "须从官方导航逐项确认人大、司法、住建、人社等发布页。"
+    last_success_at: null
+    terms_review: "pending_operator_review"
+    robots_review: "pending_operator_review"
+    approved_fetch_modes: []
+    publication_rights: "pending_review"
+    redistribution_policy: "metadata_and_link_only_until_reviewed"
+    review_state: "research_seed_only"
+    reviewer: null
+  - source_id: "CN-JL-SY-GOV"
+    name: "松原市人民政府"
+    publisher: "松原市人民政府"
+    entry_url: "https://www.jlsy.gov.cn/"
+    identity_status: "candidate_official_entry"
+    identity_evidence_url: "https://www.jlsy.gov.cn/"
+    content_types: ["local_government_rule", "normative_document"]
+    regions: ["CN-JL-SY"]
+    access_status: "access_failed_in_plan_research"
+    access_notes: "须核对实际发布主体、文件性质和地域范围。"
+    last_success_at: null
+    terms_review: "pending_operator_review"
+    robots_review: "pending_operator_review"
+    approved_fetch_modes: []
+    publication_rights: "pending_review"
+    redistribution_policy: "metadata_and_link_only_until_reviewed"
+    review_state: "research_seed_only"
+    reviewer: null

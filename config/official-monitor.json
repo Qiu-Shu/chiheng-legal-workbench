@@ -1,0 +1,303 @@
+{
+  "schema_version": 1,
+  "frozen_at": "2026-09-27T10:04:48.826228+00:00",
+  "metadata_baseline_source": "verification/official-baseline-audit-2026-09-27.json",
+  "purpose": "personal_noncommercial_learning",
+  "auto_accept_changes": false,
+  "targets": [
+    {
+      "law_id": "ff8081818a21dc13018b425303b7086d",
+      "title": "中华人民共和国民事诉讼法",
+      "source_url": "https://flk.npc.gov.cn/detail?id=ff8081818a21dc13018b425303b7086d",
+      "original_path": "data/official-basic-laws/ff8081818a21dc13018b425303b7086d/063e6b6228c44feef7aec32fe4c088012a272c6e5e05b67f6ae0cce6c2e87ed6/original.docx",
+      "original_sha256": "063e6b6228c44feef7aec32fe4c088012a272c6e5e05b67f6ae0cce6c2e87ed6",
+      "metadata": {
+        "sxx": 3,
+        "gbrq": "2023-09-01",
+        "sxrq": "2024-01-01",
+        "zdjgName": "全国人民代表大会",
+        "flxz": "法律"
+      }
+    },
+    {
+      "law_id": "ff8080816f135f46016f1d1b81b01351",
+      "title": "中华人民共和国刑事诉讼法",
+      "source_url": "https://flk.npc.gov.cn/detail?id=ff8080816f135f46016f1d1b81b01351",
+      "original_path": "data/official-basic-laws/ff8080816f135f46016f1d1b81b01351/6810ffec97e23afcf5e5e0605f6f15c38299e0acb70c55d77c3c5a1882d954a7/original.docx",
+      "original_sha256": "6810ffec97e23afcf5e5e0605f6f15c38299e0acb70c55d77c3c5a1882d954a7",
+      "metadata": {
+        "sxx": 3,
+        "gbrq": "2018-10-26",
+        "sxrq": "2018-10-26",
+        "zdjgName": "全国人民代表大会",
+        "flxz": "法律"
+      }
+    },
+    {
+      "law_id": "2c909fdd678bf17901678bf858550a0f",
+      "title": "中华人民共和国行政诉讼法",
+      "source_url": "https://flk.npc.gov.cn/detail?id=2c909fdd678bf17901678bf858550a0f",
+      "original_path": "data/official-basic-laws/2c909fdd678bf17901678bf858550a0f/0ee676b738e8173f6c442342595b0282552964ad1446eeec557beafa5f819472/original.docx",
+      "original_sha256": "0ee676b738e8173f6c442342595b0282552964ad1446eeec557beafa5f819472",
+      "metadata": {
+        "sxx": 3,
+        "gbrq": "2017-06-27",
+        "sxrq": "2017-07-01",
+        "zdjgName": "全国人民代表大会",
+        "flxz": "法律"
+      }
+    },
+    {
+      "law_id": "2c909fdd678bf17901678bf74d7106b3",
+      "title": "中华人民共和国劳动合同法",
+      "source_url": "https://flk.npc.gov.cn/detail?id=2c909fdd678bf17901678bf74d7106b3",
+      "original_path": "data/official-basic-laws/2c909fdd678bf17901678bf74d7106b3/ede08615cfea42f23c6650c852cd5a3a7641bd176c12b2d34428cce5822938dc/original.docx",
+      "original_sha256": "ede08615cfea42f23c6650c852cd5a3a7641bd176c12b2d34428cce5822938dc",
+      "metadata": {
+        "sxx": 3,
+        "gbrq": "2012-12-28",
+        "sxrq": "2013-07-01",
+        "zdjgName": "全国人民代表大会常务委员会",
+        "flxz": "法律"
+      }
+    },
+    {
+      "law_id": "ff8081818c9108eb018cb6922f750c07",
+      "title": "中华人民共和国公司法",
+      "source_url": "https://flk.npc.gov.cn/detail?id=ff8081818c9108eb018cb6922f750c07",
+      "original_path": "data/official-basic-laws/ff8081818c9108eb018cb6922f750c07/a78e7a25c9469c90957d697152c2a83c47892ccde6319e86a5d6ab8f6187e5ce/original.docx",
+      "original_sha256": "a78e7a25c9469c90957d697152c2a83c47892ccde6319e86a5d6ab8f6187e5ce",
+      "metadata": {
+        "sxx": 3,
+        "gbrq": "2023-12-29",
+        "sxrq": "2024-07-01",
+        "zdjgName": "全国人民代表大会常务委员会",
+        "flxz": "法律"
+      }
+    },
+    {
+      "law_id": "ff8081818a21e6c3018a508d491a0c98",
+      "title": "中华人民共和国行政复议法",
+      "source_url": "https://flk.npc.gov.cn/detail?id=ff8081818a21e6c3018a508d491a0c98",
+      "original_path": "data/official-basic-laws/ff8081818a21e6c3018a508d491a0c98/2af4439512c5ffafc8d40e4412e06636721d18410b0cb474301bc825c96a5dde/original.docx",
+      "original_sha256": "2af4439512c5ffafc8d40e4412e06636721d18410b0cb474301bc825c96a5dde",
+      "metadata": {
+        "sxx": 3,
+        "gbrq": "2023-09-01",
+        "sxrq": "2024-01-01",
+        "zdjgName": "全国人民代表大会常务委员会",
+        "flxz": "法律"
+      }
+    },
+    {
+      "law_id": "ff80818181cdceb30181d801c31c4070",
+      "title": "最高人民法院关于适用《中华人民共和国民事诉讼法》的解释",
+      "source_url": "https://flk.npc.gov.cn/detail?id=ff80818181cdceb30181d801c31c4070",
+      "original_path": "data/official-basic-laws/ff80818181cdceb30181d801c31c4070/a8dcb7894aa019b5acd3c5f8341cde6118548cd61e6149025831265fb9917698/original.docx",
+      "original_sha256": "a8dcb7894aa019b5acd3c5f8341cde6118548cd61e6149025831265fb9917698",
+      "metadata": {
+        "sxx": 3,
+        "gbrq": "2022-04-01",
+        "sxrq": "2022-04-10",
+        "zdjgName": "最高人民法院",
+        "flxz": "司法解释"
+      }
+    },
+    {
+      "law_id": "ff80818179f5d2480179fa4c0ccb0492",
+      "title": "最高人民法院关于适用《中华人民共和国民事诉讼法》执行程序若干问题的解释",
+      "source_url": "https://flk.npc.gov.cn/detail?id=ff80818179f5d2480179fa4c0ccb0492",
+      "original_path": "data/official-basic-laws/ff80818179f5d2480179fa4c0ccb0492/ded777fe67d072b739a0425986edb6c198fdfc7b39f5018a7e486bc64a1e6a1e/original.docx",
+      "original_sha256": "ded777fe67d072b739a0425986edb6c198fdfc7b39f5018a7e486bc64a1e6a1e",
+      "metadata": {
+        "sxx": 3,
+        "gbrq": "2020-12-29",
+        "sxrq": "2021-01-01",
+        "zdjgName": "最高人民法院",
+        "flxz": "司法解释"
+      }
+    },
+    {
+      "law_id": "ff808181799def980179b1ab569c1b33",
+      "title": "最高人民法院关于适用《中华人民共和国民事诉讼法》审判监督程序若干问题的解释",
+      "source_url": "https://flk.npc.gov.cn/detail?id=ff808181799def980179b1ab569c1b33",
+      "original_path": "data/official-basic-laws/ff808181799def980179b1ab569c1b33/9a29d1fdee3e037dad0704d575efbe1e4af5c05c8fa33989f4d5f61eacdd2b11/original.doc",
+      "original_sha256": "9a29d1fdee3e037dad0704d575efbe1e4af5c05c8fa33989f4d5f61eacdd2b11",
+      "metadata": {
+        "sxx": 3,
+        "gbrq": "2020-12-29",
+        "sxrq": "2021-01-01",
+        "zdjgName": "最高人民法院",
+        "flxz": "司法解释"
+      }
+    },
+    {
+      "law_id": "ff8081817b969375017b9b912cd009dc",
+      "title": "最高人民法院关于适用《中华人民共和国刑事诉讼法》的解释",
+      "source_url": "https://flk.npc.gov.cn/detail?id=ff8081817b969375017b9b912cd009dc",
+      "original_path": "data/official-basic-laws/ff8081817b969375017b9b912cd009dc/3f2a61fe440bef7ff186714c40a50526bdea9a041d5bbd1035a93f6962f63a39/original.docx",
+      "original_sha256": "3f2a61fe440bef7ff186714c40a50526bdea9a041d5bbd1035a93f6962f63a39",
+      "metadata": {
+        "sxx": 3,
+        "gbrq": "2021-01-26",
+        "sxrq": "2021-03-01",
+        "zdjgName": "最高人民法院",
+        "flxz": "司法解释"
+      }
+    },
+    {
+      "law_id": "2c90e5ba65c68cf70167f29d0e604ec4",
+      "title": "最高人民法院关于适用《中华人民共和国行政诉讼法》的解释",
+      "source_url": "https://flk.npc.gov.cn/detail?id=2c90e5ba65c68cf70167f29d0e604ec4",
+      "original_path": "data/official-basic-laws/2c90e5ba65c68cf70167f29d0e604ec4/933e15eea28d623df8ae3e0a1bf38eedacec71bde47feb2b95744b04f08ecdb9/original.docx",
+      "original_sha256": "933e15eea28d623df8ae3e0a1bf38eedacec71bde47feb2b95744b04f08ecdb9",
+      "metadata": {
+        "sxx": 3,
+        "gbrq": "2018-02-06",
+        "sxrq": "2018-02-08",
+        "zdjgName": "最高人民法院",
+        "flxz": "司法解释"
+      }
+    },
+    {
+      "law_id": "ff8080816f3cbb3c016f40927caf049c",
+      "title": "中华人民共和国劳动合同法实施条例",
+      "source_url": "https://flk.npc.gov.cn/detail?id=ff8080816f3cbb3c016f40927caf049c",
+      "original_path": "data/official-basic-laws/ff8080816f3cbb3c016f40927caf049c/f0692e2df571fee2d799c6e391e3168837f40bb422c6696f55aeafd9b952aa9e/original.docx",
+      "original_sha256": "f0692e2df571fee2d799c6e391e3168837f40bb422c6696f55aeafd9b952aa9e",
+      "metadata": {
+        "sxx": 3,
+        "gbrq": "2008-09-18",
+        "sxrq": null,
+        "zdjgName": "国务院",
+        "flxz": "行政法规"
+      }
+    },
+    {
+      "law_id": "ff80808177e75f88017800739d621b12",
+      "title": "最高人民法院关于审理劳动争议案件适用法律问题的解释（一）",
+      "source_url": "https://flk.npc.gov.cn/detail?id=ff80808177e75f88017800739d621b12",
+      "original_path": "data/official-basic-laws/ff80808177e75f88017800739d621b12/981f6f43d4af0ad85f66948aa9722d42a63a00b1efc6ccacc63136e0dc85c77d/original.docx",
+      "original_sha256": "981f6f43d4af0ad85f66948aa9722d42a63a00b1efc6ccacc63136e0dc85c77d",
+      "metadata": {
+        "sxx": 3,
+        "gbrq": "2020-12-29",
+        "sxrq": "2021-01-01",
+        "zdjgName": "最高人民法院",
+        "flxz": "司法解释"
+      }
+    },
+    {
+      "law_id": "ff80818198a7eafa0199329bcc11687f",
+      "title": "最高人民法院关于审理劳动争议案件适用法律问题的解释（二）",
+      "source_url": "https://flk.npc.gov.cn/detail?id=ff80818198a7eafa0199329bcc11687f",
+      "original_path": "data/official-basic-laws/ff80818198a7eafa0199329bcc11687f/435f48274f5bbf8321ad7c9d94e24a1ebb5469a1320d087b564ee87b09999621/original.docx",
+      "original_sha256": "435f48274f5bbf8321ad7c9d94e24a1ebb5469a1320d087b564ee87b09999621",
+      "metadata": {
+        "sxx": 3,
+        "gbrq": "2025-07-31",
+        "sxrq": "2025-09-01",
+        "zdjgName": "最高人民法院",
+        "flxz": "司法解释"
+      }
+    },
+    {
+      "law_id": "ff8081819150444501916e8c37764524",
+      "title": "最高人民法院关于适用《中华人民共和国公司法》时间效力的若干规定",
+      "source_url": "https://flk.npc.gov.cn/detail?id=ff8081819150444501916e8c37764524",
+      "original_path": "data/official-basic-laws/ff8081819150444501916e8c37764524/7bf421d9d23051b21ad89423a59c4009ceefde1f30aa37a22bb6521da7db16e4/original.docx",
+      "original_sha256": "7bf421d9d23051b21ad89423a59c4009ceefde1f30aa37a22bb6521da7db16e4",
+      "metadata": {
+        "sxx": 3,
+        "gbrq": "2024-06-29",
+        "sxrq": "2024-07-01",
+        "zdjgName": "最高人民法院",
+        "flxz": "司法解释"
+      }
+    },
+    {
+      "law_id": "ff808181907350630190dd6d975c6c01",
+      "title": "国务院关于实施《中华人民共和国公司法》注册资本登记管理制度的规定",
+      "source_url": "https://flk.npc.gov.cn/detail?id=ff808181907350630190dd6d975c6c01",
+      "original_path": "data/official-basic-laws/ff808181907350630190dd6d975c6c01/1cd0bce3a5939aafcdec269b33d2010392606dd5047c9b6847177f631a4c9946/original.docx",
+      "original_sha256": "1cd0bce3a5939aafcdec269b33d2010392606dd5047c9b6847177f631a4c9946",
+      "metadata": {
+        "sxx": 3,
+        "gbrq": "2024-07-01",
+        "sxrq": "2024-07-01",
+        "zdjgName": "国务院",
+        "flxz": "行政法规"
+      }
+    },
+    {
+      "law_id": "ff808181927f1276019448a29dca7d34",
+      "title": "最高人民法院关于《中华人民共和国公司法》第八十八条第一款不溯及适用的批复",
+      "source_url": "https://flk.npc.gov.cn/detail?id=ff808181927f1276019448a29dca7d34",
+      "original_path": "data/official-basic-laws/ff808181927f1276019448a29dca7d34/2160910d888fd21a305e8b6dcabc356829e3201d65a32a05820544e0f8a010f8/original.docx",
+      "original_sha256": "2160910d888fd21a305e8b6dcabc356829e3201d65a32a05820544e0f8a010f8",
+      "metadata": {
+        "sxx": 3,
+        "gbrq": "2024-12-24",
+        "sxrq": "2024-12-24",
+        "zdjgName": "最高人民法院",
+        "flxz": "司法解释"
+      }
+    },
+    {
+      "law_id": "ff8081819dfcb526019e0ac7ce234ece",
+      "title": "中华人民共和国行政复议法实施条例",
+      "source_url": "https://flk.npc.gov.cn/detail?id=ff8081819dfcb526019e0ac7ce234ece",
+      "original_path": "data/official-basic-laws/ff8081819dfcb526019e0ac7ce234ece/13ca48827d4fa7ec5a6fe0f3ab602a512549224b67837a2fe82768c77b797d86/original.docx",
+      "original_sha256": "13ca48827d4fa7ec5a6fe0f3ab602a512549224b67837a2fe82768c77b797d86",
+      "metadata": {
+        "sxx": 3,
+        "gbrq": "2026-04-29",
+        "sxrq": "2026-07-01",
+        "zdjgName": "国务院",
+        "flxz": "行政法规"
+      }
+    },
+    {
+      "law_id": "ff80808177e757ac017800561d541abb",
+      "title": "最高人民法院关于适用《中华人民共和国民法典》时间效力的若干规定",
+      "source_url": "https://flk.npc.gov.cn/detail?id=ff80808177e757ac017800561d541abb",
+      "original_path": "data/official-basic-laws/ff80808177e757ac017800561d541abb/5d4094c89747612cea364b43d68c031d8fb6afa4b16e9ea86d7f7904946f03c5/original.docx",
+      "original_sha256": "5d4094c89747612cea364b43d68c031d8fb6afa4b16e9ea86d7f7904946f03c5",
+      "metadata": {
+        "sxx": 3,
+        "gbrq": "2020-12-29",
+        "sxrq": "2021-01-01",
+        "zdjgName": "最高人民法院",
+        "flxz": "司法解释"
+      }
+    },
+    {
+      "law_id": "ff8081818c24e05b018c814e6de45ab5",
+      "title": "最高人民法院关于适用《中华人民共和国民法典》合同编通则若干问题的解释",
+      "source_url": "https://flk.npc.gov.cn/detail?id=ff8081818c24e05b018c814e6de45ab5",
+      "original_path": "data/official-basic-laws/ff8081818c24e05b018c814e6de45ab5/d0ca784f5f3178633d6e3ffd91acf1e88f068f672acc3fc22ac4ef928b377bd4/original.docx",
+      "original_sha256": "d0ca784f5f3178633d6e3ffd91acf1e88f068f672acc3fc22ac4ef928b377bd4",
+      "metadata": {
+        "sxx": 3,
+        "gbrq": "2023-12-04",
+        "sxrq": "2023-12-05",
+        "zdjgName": "最高人民法院",
+        "flxz": "司法解释"
+      }
+    },
+    {
+      "law_id": "ff808081729d1efe01729d50b5c500bf",
+      "title": "中华人民共和国民法典",
+      "source_url": "https://flk.npc.gov.cn/detail?id=ff808081729d1efe01729d50b5c500bf",
+      "original_path": "data/official-samples/civil-code-ff808081729d1efe01729d50b5c500bf.docx",
+      "original_sha256": "6926a597a66c5aad4803591ce9a51a8eebe847260f5ba2805210b608ded78353",
+      "metadata": {
+        "sxx": 3,
+        "gbrq": "2020-05-28",
+        "sxrq": "2021-01-01",
+        "zdjgName": "全国人民代表大会",
+        "flxz": "法律"
+      }
+    }
+  ]
+}

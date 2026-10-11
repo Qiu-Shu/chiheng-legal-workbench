@@ -1,0 +1,47 @@
+schema_version: "1.0"
+matter_id: null
+mode: null
+jurisdiction:
+  legal_system: "mainland_china"
+  forum_type: null
+  forum_name: null
+  forum_region: null
+  lawyer_region: "吉林省长春市"
+  party_regions: []
+  fact_regions: []
+  property_regions: []
+  relevant_regions: []
+procedure:
+  category: null
+  stage: null
+  dates:
+    fact_occurred_at: null
+    claim_filed_at: null
+    first_instance_accepted_at: null
+    served_at: null
+    hearing_at: null
+    legal_research_as_of: null
+client_position:
+  role: null
+  relief_sought: []
+  minimum_objective: null
+  authorized_admissions: []
+  prohibited_disclosures: []
+target:
+  document_id: null
+  document_version: null
+  full_text_available: false
+  pages_expected: null
+  pages_read: []
+  attachments_complete: false
+  known_missing_ranges: []
+evidence_manifest: []
+fact_register: []
+network_policy:
+  public_abstract_queries: true
+  client_identifiers_in_queries: false
+  upload_private_documents: false
+output:
+  audience: "internal_lawyers"
+  format: "review_and_draft"
+  language: "zh-CN"

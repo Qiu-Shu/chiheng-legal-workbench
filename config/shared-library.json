@@ -1,0 +1,12 @@
+{
+  "library_id": "menglu-public-law",
+  "purpose": "personal_noncommercial_learning",
+  "scope": "public_law_only",
+  "corpus_path": "../vendor/treasury/sources/china-law/laws/provision-index.json",
+  "corpus_origin": "existing_china_law_bundle",
+  "upstream": "https://github.com/lawtext/laws",
+  "redistribution": "not_enabled",
+  "official_tools": ["flk-npc", "rmfyalk"],
+  "offline_review_state": "unverified_mirror",
+  "notice": "复用现存公开法规索引，不复制私有案件；原索引时效标签不等于本项目核验。"
+}

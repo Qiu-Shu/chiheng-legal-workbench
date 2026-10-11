@@ -1,0 +1,6 @@
+interface:
+  display_name: "持衡·中国诉讼攻防审查"
+  short_description: "核验依据，过滤弱攻击，形成可复核的中国诉讼意见"
+  default_prompt: "Use $cn-litigation-redteam to 审查附件；先确认立场、程序和材料范围，再输出内部审查及待承办律师复核的拟对外稿，不新增未经确认的事实承认。"
+policy:
+  allow_implicit_invocation: true

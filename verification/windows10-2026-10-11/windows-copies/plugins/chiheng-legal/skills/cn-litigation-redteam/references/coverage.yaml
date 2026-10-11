@@ -1,0 +1,52 @@
+# 本文件既有实测/观察记录均属旧 Mac 批次，不能据此推断 Windows 10 已通过。
+schema_version: "2.0"
+release_tier: "experimental"
+verified_at: "2026-09-27"
+output_policy: "same_structure_and_depth_all_tiers"
+modules:
+  civil_commercial:
+    status: "experimental"
+    scope: "民商事一审、二审常用书面攻防方法"
+    external_draft: "requires_lawyer_review"
+  labor:
+    status: "experimental"
+    scope: "劳动仲裁与诉讼，区分程序阶段"
+    external_draft: "requires_lawyer_review"
+  enforcement:
+    status: "experimental"
+    scope: "执行、执行异议及相关诉讼"
+    external_draft: "requires_lawyer_review"
+  administrative:
+    status: "experimental"
+    scope: "行政复议与诉讼"
+    external_draft: "requires_lawyer_review"
+  commercial_arbitration:
+    status: "experimental"
+    scope: "商事仲裁，依实际机构规则"
+    external_draft: "requires_lawyer_review"
+  foreign_hmt:
+    status: "experimental"
+    scope: "涉外及港澳台关联事项，准据法须具体核验"
+    external_draft: "requires_lawyer_review"
+  criminal:
+    status: "experimental"
+    scope: "不得使用民事模板生成刑事对外稿"
+    external_draft: "requires_lawyer_review"
+  family: {status: experimental, external_draft: requires_lawyer_review}
+  corporate: {status: experimental, external_draft: requires_lawyer_review}
+  bankruptcy: {status: experimental, external_draft: requires_lawyer_review}
+  intellectual_property: {status: experimental, external_draft: requires_lawyer_review}
+  real_estate_construction: {status: experimental, external_draft: requires_lawyer_review}
+  finance_tax: {status: experimental, external_draft: requires_lawyer_review}
+  compliance_data_environment: {status: experimental, external_draft: requires_lawyer_review}
+local_enhancement:
+  priority_regions: ["吉林省", "长春市", "松原市"]
+  status: "experimental"
+  statement: "吉林和松原首页可读；长春HTTPS失败，HTTP栏目外壳仅隔离观察；地方规范全文覆盖尚未建成"
+public_legal_index:
+  status: "experimental"
+  statement: "本机共享旧法规镜像；民法典及六部基础法官方原件已隔离入库并完成所记录的机械校验；动态数量和人工审核状态以服务实测为准，不宣称全国完整"
+scrapling_runtime:
+  # 下列 local_smoke_passed 是原 Mac 历史结果，不是 Windows 10 原生验收。
+  status: "local_smoke_passed"
+  statement: "本机0.4.15静态、动态、外网实测通过；依赖不内嵌分发包"

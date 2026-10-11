@@ -1,0 +1,8 @@
+{
+  "name": "local-bb-browser-install",
+  "private": true,
+  "description": "User-requested local bb-browser installation; lifecycle scripts disabled.",
+  "dependencies": {
+    "bb-browser": "0.14.2"
+  }
+}

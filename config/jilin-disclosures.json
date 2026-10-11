@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "scope": "三份独立官方公开HTML；比较范围以各自来源的comparison_notice说明为准，未设该字段的来源与旧清单及其附件未比对；不作法律审核",
+  "sources": [
+    {
+      "id": "9703553",
+      "status": "ready",
+      "sample_id": "9708500",
+      "url": "https://xxgk.jl.gov.cn/szf/gkml/202609/t20260908_9703553.html",
+      "title": "吉林省人民政府办公厅关于印发《吉林省加强基层消防工作若干举措》的通知",
+      "publisher": "吉林省人民政府办公厅",
+      "region": "CN-JL",
+      "document_number": "吉政办规〔2026〕2号",
+      "metadata_created": "2026-08-28",
+      "metadata_published": "2026-09-08",
+      "body_signature": "2026-08-25",
+      "body_issuers": ["吉林省人民政府办公厅"],
+      "body_style_sha256": [],
+      "page_template_sha256": "4fd40d062582ccb6c52f83f0b9f4436eed21fd110adf5c167aef656e12c9c3d7",
+      "uncompared_alternative_urls": ["https://www.jlrd.gov.cn/jlsjk/202609/t20260911_9708500.html"],
+      "observation_notice": "页面成文日期2026-08-28与正文落款2026-08-25不一致，均为来源观察值，未确定法律适用日期。"
+    },
+    {
+      "id": "9673733",
+      "status": "ready",
+      "sample_id": "9713602",
+      "url": "https://xxgk.jl.gov.cn/zsjg/aqjg/xxgkmlqy/202607/t20260731_9673733.html",
+      "title": "关于印发《吉林省安全生产责任保险实施细则》的通知",
+      "publisher": "吉林省应急管理厅",
+      "region": "CN-JL",
+      "document_number": "吉应急调查统计联〔2026〕104号",
+      "metadata_created": "2026-07-30",
+      "metadata_published": "2026-07-31",
+      "body_signature": "2026-07-30",
+      "body_issuers": ["吉林省应急管理厅", "吉林省财政厅", "吉林省工业和信息化厅", "吉林省住房和城乡建设厅", "吉林省交通运输厅", "吉林省水利厅", "国家金融监督管理总局吉林监管局"],
+      "body_style_sha256": ["2959c8057e888f1a503327cfa3e669a825fc4842b0ced45ba3cbfa0ba7fcd43a", "8d71c4d721b5365b8184478cdd171b6ea92be54af1b24e84a3273b25de413428"],
+      "page_template_sha256": "350d97bea5ea3548a97941fd25087c389214f617be6c73156a80bc6df43adc4a",
+      "uncompared_alternative_urls": ["https://www.jlrd.gov.cn/jlsjk/202609/t20260916_9713602.html"],
+      "observation_notice": "发布机关字段为吉林省应急管理厅；正文落款为七部门。HTML末尾另有实施细则题名，按原顺序保留；旧清单题名截断，不据此补齐或认定附件同版。"
+    },
+    {
+      "id": "9687313",
+      "status": "ready",
+      "sample_id": "9689747",
+      "url": "https://xxgk.jl.gov.cn/szf/gkml/202608/t20260825_9687313.html",
+      "title": "吉林省人民政府办公厅关于印发《吉林省支持秸秆综合利用若干举措》的通知",
+      "publisher": "吉林省人民政府办公厅",
+      "region": "CN-JL",
+      "document_number": "吉政办规〔2026〕1号",
+      "metadata_created": "2026-08-15",
+      "metadata_published": "2026-08-25",
+      "body_signature": "2026-08-15",
+      "body_issuers": ["吉林省人民政府办公厅"],
+      "body_style_sha256": [],
+      "page_template_sha256": "c00950ec0c7985a77d6d917d253e0a19df2bdd70dae4bd7fa528bc35efa80098",
+      "uncompared_alternative_urls": ["https://www.jlrd.gov.cn/jlsjk/202608/P020260827530388004847.wps"],
+      "comparison_notice": "仅作有限比较：本HTML第十二项为0.8%，旧10页PDF（https://www.jlrd.gov.cn/jlsjk/202608/P020260827530388203078.pdf，SHA256=05504e97e8e7f12c08dc3112a289095cd385256f656ff07e4064c877de5e55dd）第5页可视原文为08%，保留差异，不静默校正；另4页打印PDF（https://www.jlrd.gov.cn/jlsjk/202608/P020260827530388387152.pdf，SHA256=09deb13cb570a9e6724ee0ff76633d7feb78eefd6c67a45b8a70c56bfe1cbd8a）局部观察为0.8%，未通过严格整份PDF验收，不能认定全文同版；WPS未下载、未比较",
+      "observation_notice": "成文日期及正文落款均为2026-08-15，发布日期为2026-08-25，均为来源观察值。正文第二十项记载自印发之日起施行、执行期3年；未据此自动确认生效日或失效日。"
+    }
+  ],
+  "unresolved": [
+    {"sample_id": "9677309", "reason": "已取得交通裁量主文、附文及八个基准表原件，结构验收尚未完成，未作为完整正文入库，不进入独立HTML运行清单。"}
+  ]
+}

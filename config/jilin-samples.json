@@ -1,0 +1,469 @@
+{
+  "schema_version": 1,
+  "scope": "固定样本合计不超过20；未自动开启地方后台全文采集",
+  "catalog_observations": [
+    {
+      "url": "https://was.jl.gov.cn/was5/web/gov/renda/response_renda_guizhangku20230807.jsp?category=list&page=1&size=20&wjlx=1",
+      "source_total": 302,
+      "observed": 20
+    },
+    {
+      "url": "https://was.jl.gov.cn/was5/web/gov/renda/response_renda_guizhangku20230807.jsp?category=list&page=1&size=20&wjlx=2",
+      "source_total": 308,
+      "observed": 20
+    },
+    {
+      "url": "https://was.jl.gov.cn/was5/web/gov/renda/response_renda_guizhangku20230807.jsp?category=list&page=1&size=20&wjlx=8",
+      "source_total": 3811,
+      "observed": 20
+    },
+    {
+      "url": "https://was.jl.gov.cn/was5/web/gov/szfgz/response_szf_guizhang.jsp?type=guizhang&pageIndex=1&pageSize=10&keyWord=&keyWordType=all&callback=result",
+      "source_total": 120,
+      "observed": 10
+    },
+    {
+      "url": "https://was.jl.gov.cn/was5/web/gov/renda/response_renda_guizhangku20230807.jsp?category=list&page=2&size=20&wjlx=2",
+      "source_total": 308,
+      "observed": 20
+    }
+  ],
+  "samples": [
+    {
+      "id": "9679876",
+      "title": "吉林省民族团结进步促进条例",
+      "url": "https://www.jlrd.gov.cn/jlsjk/202608/t20260811_9679876.html",
+      "kind": "local_regulation",
+      "region_name": "吉林省",
+      "issuer": "吉林省人民代表大会常务委员会",
+      "official_list_metadata": {
+        "wjlx": "1",
+        "gbrq": "2026-07-30",
+        "title": "吉林省民族团结进步促进条例",
+        "wjcj": "1",
+        "fwzh": "吉林省第十四届人民代表大会常务委员会公告第87号",
+        "puburl": "http://www.jlrd.gov.cn/jlsjk/202608/t20260811_9679876.html",
+        "sxx": "2",
+        "ztfl_first": "民族、宗教\\民族事务,民族、宗教\\其他",
+        "ztfl": "民族、宗教\\民族事务,民族、宗教\\其他",
+        "id": "9679876",
+        "region": "吉林省",
+        "zdzt": "吉林省人民代表大会常务委员会",
+        "zdxs": "1"
+      }
+    },
+    {
+      "id": "9679875",
+      "title": "吉林省实施《中华人民共和国工会法》若干规定",
+      "url": "https://www.jlrd.gov.cn/jlsjk/202608/t20260811_9679875.html",
+      "kind": "local_regulation",
+      "region_name": "吉林省",
+      "issuer": "吉林省人民代表大会常务委员会",
+      "official_list_metadata": {
+        "wjlx": "1",
+        "gbrq": "2026-07-30",
+        "title": "吉林省实施《中华人民共和国工会法》若干规定",
+        "wjcj": "1",
+        "fwzh": "吉林省第十四届人民代表大会常务委员会公告第90号",
+        "puburl": "http://www.jlrd.gov.cn/jlsjk/202608/t20260811_9679875.html",
+        "sxx": "2",
+        "ztfl_first": "其他",
+        "ztfl": "其他",
+        "id": "9679875",
+        "region": "吉林省",
+        "zdzt": "吉林省人民代表大会常务委员会",
+        "zdxs": "2"
+      }
+    },
+    {
+      "id": "9679877",
+      "title": "吉林省湿地保护条例",
+      "url": "https://www.jlrd.gov.cn/jlsjk/202608/t20260811_9679877.html",
+      "kind": "local_regulation",
+      "region_name": "吉林省",
+      "issuer": "吉林省人民代表大会常务委员会",
+      "official_list_metadata": {
+        "wjlx": "1",
+        "gbrq": "2026-07-30",
+        "title": "吉林省湿地保护条例",
+        "wjcj": "1",
+        "fwzh": "吉林省第十四届人民代表大会常务委员会公告第88号",
+        "puburl": "http://www.jlrd.gov.cn/jlsjk/202608/t20260811_9679877.html",
+        "sxx": "1",
+        "ztfl_first": "农业、林业、水利\\林业,农业、林业、水利\\其他",
+        "ztfl": "农业、林业、水利\\林业,农业、林业、水利\\其他",
+        "id": "9679877",
+        "region": "吉林省",
+        "zdzt": "吉林省人民代表大会常务委员会",
+        "zdxs": "2"
+      }
+    },
+    {
+      "id": "9679874",
+      "title": "吉林省历史文化名城名镇名村保护条例",
+      "preferred_format": "pdf",
+      "url": "https://www.jlrd.gov.cn/jlsjk/202608/t20260811_9679874.html",
+      "kind": "local_regulation",
+      "region_name": "吉林省",
+      "issuer": "吉林省人民代表大会常务委员会",
+      "official_list_metadata": {
+        "wjlx": "1",
+        "gbrq": "2026-07-30",
+        "title": "吉林省历史文化名城名镇名村保护条例",
+        "wjcj": "1",
+        "fwzh": "吉林省第十四届人民代表大会 常务委员会公告第89号",
+        "puburl": "http://www.jlrd.gov.cn/jlsjk/202608/t20260811_9679874.html",
+        "sxx": "1",
+        "ztfl_first": "文化、广电、新闻出版\\文化",
+        "ztfl": "文化、广电、新闻出版\\文化",
+        "id": "9679874",
+        "region": "吉林省",
+        "zdzt": "吉林省人民代表大会常务委员会",
+        "zdxs": "1"
+      }
+    },
+    {
+      "id": "9626046",
+      "title": "吉林省乡镇和街道综合行政执法条例",
+      "url": "https://www.jlrd.gov.cn/jlsjk/202605/t20260522_9626046.html",
+      "kind": "local_regulation",
+      "region_name": "吉林省",
+      "issuer": "吉林省人民代表大会常务委员会",
+      "official_list_metadata": {
+        "wjlx": "1",
+        "gbrq": "2026-05-14",
+        "title": "吉林省乡镇和街道综合行政执法条例",
+        "wjcj": "1",
+        "fwzh": "吉林省第十四届人民代表大会常务委员会公告第85号",
+        "puburl": "http://www.jlrd.gov.cn/jlsjk/202605/t20260522_9626046.html",
+        "sxx": "2",
+        "ztfl_first": "综合政务\\其他",
+        "ztfl": "综合政务\\其他",
+        "id": "9626046",
+        "region": "吉林省",
+        "zdzt": "吉林省人民代表大会常务委员会",
+        "zdxs": "1"
+      }
+    },
+    {
+      "id": "9676672",
+      "title": "松原市城市公园广场管理条例",
+      "url": "https://www.jlrd.gov.cn/jlsjk/202608/t20260805_9676672.html",
+      "kind": "local_regulation",
+      "region_name": "松原市",
+      "issuer": "松原市人民代表大会常务委员会",
+      "official_list_metadata": {
+        "wjlx": "2",
+        "gbrq": "2026-08-05",
+        "title": "松原市城市公园广场管理条例",
+        "wjcj": "2",
+        "fwzh": "松原市第七届人民代表大会常务委员会公告第60号",
+        "puburl": "http://www.jlrd.gov.cn/jlsjk/202608/t20260805_9676672.html",
+        "sxx": "2",
+        "ztfl_first": "城乡建设、环境保护\\城乡建设(含住房)",
+        "ztfl": "城乡建设、环境保护\\城乡建设(含住房)",
+        "id": "9676672",
+        "region": "松原市",
+        "zdzt": "松原市人民代表大会常务委员会",
+        "zdxs": "1"
+      }
+    },
+    {
+      "id": "9370632",
+      "title": "松原市城市建筑垃圾管理条例",
+      "url": "https://www.jlrd.gov.cn/jlsjk/202512/t20251212_9370632.html",
+      "kind": "local_regulation",
+      "region_name": "松原市",
+      "issuer": "松原市人民代表大会常务委员会",
+      "official_list_metadata": {
+        "wjlx": "2",
+        "gbrq": "2025-12-10",
+        "title": "松原市城市建筑垃圾管理条例",
+        "wjcj": "2",
+        "fwzh": "松原市第七届人民代表大会常务委员会公告第49号",
+        "puburl": "http://www.jlrd.gov.cn/jlsjk/202512/t20251212_9370632.html",
+        "sxx": "2",
+        "ztfl_first": "城乡建设、环境保护\\城乡建设(含住房)",
+        "ztfl": "城乡建设、环境保护\\城乡建设(含住房)",
+        "id": "9370632",
+        "region": "松原市",
+        "zdzt": "松原市人民代表大会常务委员会",
+        "zdxs": "1"
+      }
+    },
+    {
+      "id": "9297348",
+      "title": "松原市生活垃圾分类管理条例",
+      "url": "https://www.jlrd.gov.cn/jlsjk/202508/t20250806_9297348.html",
+      "kind": "local_regulation",
+      "region_name": "松原市",
+      "issuer": "松原市人民代表大会常务委员会",
+      "official_list_metadata": {
+        "wjlx": "2",
+        "gbrq": "2025-08-04",
+        "title": "松原市生活垃圾分类管理条例",
+        "wjcj": "2",
+        "fwzh": "松原市第七届人民代表大会常务委员会公告第44号",
+        "puburl": "http://www.jlrd.gov.cn/jlsjk/202508/t20250806_9297348.html",
+        "sxx": "2",
+        "ztfl_first": "城乡建设、环境保护\\城乡建设(含住房)",
+        "ztfl": "城乡建设、环境保护\\城乡建设(含住房)",
+        "id": "9297348",
+        "region": "松原市",
+        "zdzt": "松原市人民代表大会常务委员会",
+        "zdxs": "1"
+      }
+    },
+    {
+      "id": "9708500",
+      "title": "吉林省人民政府办公厅关于印发《吉林省加强基层消防工作若干举措》的通知",
+      "url": "https://www.jlrd.gov.cn/jlsjk/202609/t20260911_9708500.html",
+      "kind": "administrative_norm",
+      "region_name": "吉林省",
+      "issuer": "吉林省人民政府办公厅",
+      "official_list_metadata": {
+        "wjlx": "8",
+        "gbrq": "2026-09-08",
+        "title": "吉林省人民政府办公厅关于印发《吉林省加强基层消防工作若干举措》的通知",
+        "wjcj": "1",
+        "fwzh": "吉政办规〔2026〕2号",
+        "puburl": "http://www.jlrd.gov.cn/jlsjk/202609/t20260911_9708500.html",
+        "sxx": "2",
+        "ztfl_first": "综合政务\\应急管理",
+        "ztfl": "综合政务\\应急管理",
+        "id": "9708500",
+        "region": "吉林省",
+        "zdzt": "吉林省人民政府办公厅",
+        "zdxs": "1"
+      }
+    },
+    {
+      "id": "9689747",
+      "title": "吉林省人民政府办公厅关于印发 《吉林省支持秸秆综合利用若干举措》的通知",
+      "url": "https://www.jlrd.gov.cn/jlsjk/202608/t20260827_9689747.html",
+      "kind": "administrative_norm",
+      "region_name": "吉林省",
+      "issuer": "吉林省人民政府办公厅",
+      "official_list_metadata": {
+        "wjlx": "8",
+        "gbrq": "2026-08-15",
+        "title": "吉林省人民政府办公厅关于印发 《吉林省支持秸秆综合利用若干举措》的通知",
+        "wjcj": "1",
+        "fwzh": "吉政办规〔2026〕1号",
+        "puburl": "http://www.jlrd.gov.cn/jlsjk/202608/t20260827_9689747.html",
+        "sxx": "2",
+        "ztfl_first": "农业、林业、水利\\农业、畜牧业、渔业",
+        "ztfl": "农业、林业、水利\\农业、畜牧业、渔业",
+        "id": "9689747",
+        "region": "吉林省",
+        "zdzt": "吉林省人民政府办公厅",
+        "zdxs": "1"
+      }
+    },
+    {
+      "id": "9713602",
+      "title": "吉林省应急管理厅 吉林省财政厅 吉林省工业和信息化厅 吉林省住房和城乡建设厅 吉林省交通运输厅 吉林省水利厅 国家金融监督管理总局吉林监管局 关于印发《吉林省安全生产责任保险实",
+      "url": "https://www.jlrd.gov.cn/jlsjk/202609/t20260916_9713602.html",
+      "kind": "administrative_norm",
+      "region_name": "吉林省",
+      "issuer": "吉林省应急管理厅(吉林省矿山安全生产监督管理局),吉林省财政厅吉林省工业和信息化厅吉林省住房和城乡建设厅吉林省交通运输厅吉林省水利厅国家金融监督管理总局吉林监管局",
+      "official_list_metadata": {
+        "wjlx": "8",
+        "gbrq": "2026-07-30",
+        "title": "吉林省应急管理厅 吉林省财政厅 吉林省工业和信息化厅 吉林省住房和城乡建设厅 吉林省交通运输厅 吉林省水利厅 国家金融监督管理总局吉林监管局 关于印发《吉林省安全生产责任保险实",
+        "wjcj": "1",
+        "fwzh": "吉应急调查统计联〔2026〕104号",
+        "puburl": "http://www.jlrd.gov.cn/jlsjk/202609/t20260916_9713602.html",
+        "sxx": "2",
+        "ztfl_first": "市场监管、安全生产监管\\安全生产监管",
+        "ztfl": "市场监管、安全生产监管\\安全生产监管",
+        "id": "9713602",
+        "region": "吉林省",
+        "zdzt": "吉林省应急管理厅(吉林省矿山安全生产监督管理局),吉林省财政厅吉林省工业和信息化厅吉林省住房和城乡建设厅吉林省交通运输厅吉林省水利厅国家金融监督管理总局吉林监管局",
+        "zdxs": "1"
+      }
+    },
+    {
+      "id": "9712427",
+      "title": "吉林省民政厅关于印发《吉林省社会组织注销登记工作指引（试行）》的通知",
+      "url": "https://www.jlrd.gov.cn/jlsjk/202609/t20260915_9712427.html",
+      "kind": "administrative_norm",
+      "region_name": "吉林省",
+      "issuer": "吉林省民政厅",
+      "official_list_metadata": {
+        "wjlx": "8",
+        "gbrq": "2026-07-24",
+        "title": "吉林省民政厅关于印发《吉林省社会组织注销登记工作指引（试行）》的通知",
+        "wjcj": "1",
+        "fwzh": "吉民发﹝2026﹞10号",
+        "puburl": "http://www.jlrd.gov.cn/jlsjk/202609/t20260915_9712427.html",
+        "sxx": "2",
+        "ztfl_first": "民政、扶贫、救灾\\社团管理",
+        "ztfl": "民政、扶贫、救灾\\社团管理",
+        "id": "9712427",
+        "region": "吉林省",
+        "zdzt": "吉林省民政厅",
+        "zdxs": "1"
+      }
+    },
+    {
+      "id": "9677309",
+      "title": "吉林省交通运输厅关于修订《吉林省交通运输行政处罚裁量规则》《吉林省交通运输 行政处罚裁量基准》的通知",
+      "url": "https://www.jlrd.gov.cn/jlsjk/202608/t20260806_9677309.html",
+      "kind": "administrative_norm",
+      "region_name": "吉林省",
+      "issuer": "吉林省交通运输厅",
+      "official_list_metadata": {
+        "wjlx": "8",
+        "gbrq": "2026-07-23",
+        "title": "吉林省交通运输厅关于修订《吉林省交通运输行政处罚裁量规则》《吉林省交通运输 行政处罚裁量基准》的通知",
+        "wjcj": "1",
+        "fwzh": "吉交规〔2026〕2号",
+        "puburl": "http://www.jlrd.gov.cn/jlsjk/202608/t20260806_9677309.html",
+        "sxx": "2",
+        "ztfl_first": "工业、交通\\其他",
+        "ztfl": "工业、交通\\其他",
+        "id": "9677309",
+        "region": "吉林省",
+        "zdzt": "吉林省交通运输厅",
+        "zdxs": "1"
+      }
+    },
+    {
+      "id": "9326899",
+      "title": "吉林省行政调解规定",
+      "url": "https://xxgk.jl.gov.cn/szf/gzk/202509/t20250924_9326899.html",
+      "kind": "government_rule",
+      "region_name": "吉林省",
+      "issuer": "吉林省人民政府",
+      "official_list_metadata": {
+        "PULISHDATE": "2025.09.05 00:00:00",
+        "CRTIME": "2025.09.24 14:44:06",
+        "docabstract": "(2025年9月16日吉林省人民政府令第285号公布 自2025年12月1日起施行)",
+        "docid": "9326899",
+        "pubtime": "2026年01月16日",
+        "RELEASEDATE": "2025.09.16 00:00:00",
+        "doctitle": "吉林省行政调解规定",
+        "docpuburl": "http://xxgk.jl.gov.cn/szf/gzk/202509/t20250924_9326899.html"
+      }
+    },
+    {
+      "id": "8996214",
+      "title": "吉林省反间谍工作规定",
+      "url": "https://xxgk.jl.gov.cn/szf/gzk/202411/t20241112_8996214.html",
+      "kind": "government_rule",
+      "region_name": "吉林省",
+      "issuer": "吉林省人民政府",
+      "official_list_metadata": {
+        "PULISHDATE": "2024.11.08 00:00:00",
+        "CRTIME": "2024.11.12 15:18:11",
+        "docabstract": "（2024年11月11日吉林省人民政府令第283号公布 自2025年1月1日起施行）",
+        "docid": "8996214",
+        "pubtime": "2026年01月16日",
+        "RELEASEDATE": "2024.11.11 00:00:00",
+        "doctitle": "吉林省反间谍工作规定",
+        "docpuburl": "http://xxgk.jl.gov.cn/szf/gzk/202411/t20241112_8996214.html"
+      }
+    },
+    {
+      "id": "8858568",
+      "title": "吉林省行政处罚听证程序规定",
+      "url": "https://xxgk.jl.gov.cn/szf/gzk/202312/t20231229_8858568.html",
+      "kind": "government_rule",
+      "region_name": "吉林省",
+      "issuer": "吉林省人民政府",
+      "official_list_metadata": {
+        "PULISHDATE": "2023.12.26 00:00:00",
+        "CRTIME": "2023.12.29 09:36:58",
+        "docabstract": "（2023年12月21日吉林省人民政府令第281号公布 自2024年2月1日起施行）",
+        "docid": "8858568",
+        "pubtime": "2025年09月04日",
+        "RELEASEDATE": "2023.12.29 00:00:00",
+        "doctitle": "吉林省行政处罚听证程序规定",
+        "docpuburl": "http://xxgk.jl.gov.cn/szf/gzk/202312/t20231229_8858568.html"
+      }
+    },
+    {
+      "id": "8844861",
+      "title": "吉林省地震安全性评价管理办法",
+      "url": "https://xxgk.jl.gov.cn/szf/gzk/202311/t20231129_8844861.html",
+      "kind": "government_rule",
+      "region_name": "吉林省",
+      "issuer": "吉林省人民政府",
+      "official_list_metadata": {
+        "PULISHDATE": "2023.11.25 00:00:00",
+        "CRTIME": "2023.11.29 15:49:51",
+        "docabstract": "（2023年11月21日吉林省人民政府令第280号公布 自2024年2月1日起施行）",
+        "docid": "8844861",
+        "pubtime": "2025年09月04日",
+        "RELEASEDATE": "2023.11.27 00:00:00",
+        "doctitle": "吉林省地震安全性评价管理办法",
+        "docpuburl": "http://xxgk.jl.gov.cn/szf/gzk/202311/t20231129_8844861.html"
+      }
+    },
+    {
+      "id": "8715989",
+      "title": "吉林省税收保障办法",
+      "url": "https://xxgk.jl.gov.cn/szf/gzk/202305/t20230529_8715989.html",
+      "kind": "government_rule",
+      "region_name": "吉林省",
+      "issuer": "吉林省人民政府",
+      "official_list_metadata": {
+        "PULISHDATE": "2023.05.29 00:00:00",
+        "CRTIME": "2023.05.29 10:45:51",
+        "docabstract": "（2023年5月18日吉林省人民政府令第279号公布 自2023年7月1日起施行）",
+        "docid": "8715989",
+        "pubtime": "2025年09月04日",
+        "RELEASEDATE": "2023.05.29 00:00:00",
+        "doctitle": "吉林省税收保障办法",
+        "docpuburl": "http://xxgk.jl.gov.cn/szf/gzk/202305/t20230529_8715989.html"
+      }
+    },
+    {
+      "id": "9187982",
+      "title": "长春市永久基本农田保护条例",
+      "url": "https://www.jlrd.gov.cn/jlsjk/202504/t20250421_9187982.html",
+      "kind": "local_regulation",
+      "region_name": "长春市",
+      "issuer": "长春市人民代表大会常务委员会",
+      "official_list_metadata": {
+        "wjlx": "2",
+        "gbrq": "2025-04-06",
+        "title": "长春市永久基本农田保护条例",
+        "wjcj": "2",
+        "fwzh": "长春市第十六届人民代表大会常务委员会 公  告  第43号",
+        "puburl": "http://www.jlrd.gov.cn/jlsjk/202504/t20250421_9187982.html",
+        "sxx": "2",
+        "ztfl_first": "农业、林业、水利\\农业、畜牧业、渔业",
+        "ztfl": "农业、林业、水利\\农业、畜牧业、渔业",
+        "id": "9187982",
+        "region": "长春市",
+        "zdzt": "长春市人民代表大会常务委员会",
+        "zdxs": "1"
+      }
+    },
+    {
+      "id": "9187980",
+      "title": "长春市森林资源管理条例",
+      "url": "https://www.jlrd.gov.cn/jlsjk/202504/t20250421_9187980.html",
+      "kind": "local_regulation",
+      "region_name": "长春市",
+      "issuer": "长春市人民代表大会常务委员会",
+      "official_list_metadata": {
+        "wjlx": "2",
+        "gbrq": "2025-04-06",
+        "title": "长春市森林资源管理条例",
+        "wjcj": "2",
+        "fwzh": "长春市第十六届人民代表大会常务委员会 公  告  第43号",
+        "puburl": "http://www.jlrd.gov.cn/jlsjk/202504/t20250421_9187980.html",
+        "sxx": "2",
+        "ztfl_first": "农业、林业、水利\\林业",
+        "ztfl": "农业、林业、水利\\林业",
+        "id": "9187980",
+        "region": "长春市",
+        "zdzt": "长春市人民代表大会常务委员会",
+        "zdxs": "1"
+      }
+    }
+  ]
+}

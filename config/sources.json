@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "scope": "仅普通读取已登记的具体公开页面；首页和栏目仅作为连接观察，不代表法律覆盖。",
+  "sources": [
+    {
+      "source_id": "spc-evidence", "group": "national", "region": "CN",
+      "category": "法院发布", "document": true, "enabled": true,
+      "url": "https://www.court.gov.cn/fabu/xiangqing/212721.html"
+    },
+    {
+      "source_id": "spc-reference-status", "group": "national", "region": "CN",
+      "category": "法院发布", "document": true, "enabled": true,
+      "url": "https://www.court.gov.cn/fabu/xiangqing/508031.html"
+    },
+    {
+      "source_id": "jilin-government", "group": "local", "region": "CN-JL", "region_name": "吉林",
+      "category": "政府入口", "document": false, "enabled": true,
+      "url": "https://www.jl.gov.cn/"
+    },
+    {
+      "source_id": "changchun-government", "group": "local", "region": "CN-JL-CC", "region_name": "吉林",
+      "category": "政府公开栏目", "document": false, "enabled": true,
+      "url": "https://www.changchun.gov.cn/",
+      "fallback_urls": ["http://zwgk.changchun.gov.cn/szf_3410/bgtxxgkml/"],
+      "fallback_note": "HTTPS握手失败时仅保存官方公开栏目的HTTP隔离观察；明文传输不得提升权威或完整性。"
+    },
+    {
+      "source_id": "songyuan-government", "group": "local", "region": "CN-JL-SY", "region_name": "吉林",
+      "category": "政府入口", "document": false, "enabled": true,
+      "url": "https://www.jlsy.gov.cn/"
+    },
+    {
+      "source_id": "business-gsxt", "group": "national", "region": "CN",
+      "category": "市场监管", "document": false, "enabled": false, "manual_only": true,
+      "url": "https://www.gsxt.gov.cn/",
+      "note": "仅人工触发普通公开入口健康诊断；没有主体查询或数据连接。"
+    },
+    {
+      "source_id": "business-enforcement", "group": "national", "region": "CN",
+      "category": "执行入口", "document": false, "enabled": false, "manual_only": true,
+      "url": "https://zxgk.court.gov.cn/",
+      "note": "仅人工触发普通公开入口健康诊断；没有主体查询或数据连接。"
+    },
+    {
+      "source_id": "business-creditchina", "group": "national", "region": "CN",
+      "category": "信用入口", "document": false, "enabled": false, "manual_only": true,
+      "url": "https://www.creditchina.gov.cn/",
+      "note": "仅人工触发普通公开入口健康诊断；没有主体查询或数据连接。"
+    },
+    {
+      "source_id": "business-bankruptcy", "group": "national", "region": "CN",
+      "category": "破产入口", "document": false, "enabled": false, "manual_only": true,
+      "url": "https://pccz.court.gov.cn/pcajxxw/index/xxwsy",
+      "note": "仅人工触发普通公开入口健康诊断；没有主体查询或数据连接。"
+    }
+  ]
+}

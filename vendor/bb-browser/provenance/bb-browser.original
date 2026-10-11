@@ -1,0 +1,15 @@
+#!/bin/sh
+# Local, version-pinned installation. Browser state is separate from daily Chrome.
+export BB_BROWSER_HOME=/Users/songmenglvshi/.local/share/bb-browser/state
+export BB_BROWSER_CDP_URL=http://127.0.0.1:19224
+unset BB_BROWSER_HUB_URL BB_BROWSER_HUB_TOKEN PINIX_HUB_URL PINIX_HUB_TOKEN PINIX_TOKEN
+case "$1" in
+  --help|-h|--version|-v) ;;
+  *)
+    if ! /usr/bin/curl --noproxy '*' --silent --fail --max-time 2 --output /dev/null http://127.0.0.1:19224/json/version; then
+      echo '持衡专用 Chrome 未连接。请让 Codex 按 bb-browser-install-2026-10-09.md 启动独立窗口；不会自动接管其他浏览器。' >&2
+      exit 1
+    fi
+    ;;
+esac
+exec /Users/songmenglvshi/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node /Users/songmenglvshi/.local/share/bb-browser/0.14.2/node_modules/bb-browser/dist/cli.js "$@"

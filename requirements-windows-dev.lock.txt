@@ -1,0 +1,2 @@
+# Optional offline test dependency; install after requirements-windows.lock.txt.
+reportlab==4.4.9 --hash=sha256:68e2d103ae8041a37714e8896ec9b79a1c1e911d68c3bd2ea17546568cf17bfd

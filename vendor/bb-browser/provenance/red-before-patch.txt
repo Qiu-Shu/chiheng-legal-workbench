@@ -1,0 +1,18 @@
+2026-10-09: boundary-check.mjs against installed files, before edits.
+PASS single --help works without Chrome
+FAIL --help with daemon start cannot bypass unavailable Chrome: 0 !== 1
+PASS single -h works without Chrome
+FAIL -h with daemon start cannot bypass unavailable Chrome: 0 !== 1
+PASS single --version works without Chrome
+FAIL --version with daemon start cannot bypass unavailable Chrome: 0 !== 1
+PASS single -v works without Chrome
+FAIL -v with daemon start cannot bypass unavailable Chrome: 0 !== 1
+PASS normal read fails when dedicated Chrome is absent
+PASS normal read reaches CLI when dedicated Chrome is available
+FAIL explicit unavailable/invalid CDP fails closed: http://127.0.0.1:19224: Missing expected rejection.
+FAIL explicit unavailable/invalid CDP fails closed: invalid-url: Missing expected rejection.
+FAIL explicit unavailable/invalid CDP fails closed: http://127.0.0.1: Missing expected rejection.
+PASS reachable explicit dedicated CDP remains selected
+PASS no explicit CDP retains upstream explicit-port behavior
+RESULT installed: 8 passed, 7 failed
+Exit code: 1
