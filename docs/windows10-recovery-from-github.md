@@ -13,7 +13,7 @@
 - `chiheng-win10-recovery-2026-10-11.zip`：公开法库、Windows 安装器、源码副本、Skill/插件、运行时、离线 Python 依赖。
 - `SHA256SUMS.txt`：总包摘要。
 - `asset-manifest.json`：本轮包大小、资料数量、校验结果与排除项。
-- `Windows10-恢复与继续工程.md`：本文的独立副本。
+- `Windows10-Recovery-Guide.md`：本文的独立中文副本。
 
 GitHub 自动生成的 `Source code (zip)` 只含 Git 文件，不含上述恢复包；不能只下载它。代码基线为 `519d1ba741f58a02107002c2055c63906c58f828`，后续恢复说明提交不改变该代码基线。
 
