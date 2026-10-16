@@ -1,0 +1,28 @@
+{
+  "source_commit": "ccadffa3d7526cc57369d6c3a633d40c54bb08e8",
+  "original_bundle_files_verified": 452,
+  "runtime": "D:\\Documents\\ChatGPT\\律所项目\\.local\\integrations\\chiheng-legal-workbench\\.local\\task3-build-input-20261016\\runtime",
+  "copies": "D:\\Documents\\ChatGPT\\律所项目\\.local\\integrations\\chiheng-legal-workbench\\verification\\windows10-2026-10-11\\windows-copies",
+  "source_selection": 192,
+  "selected_source_copies_vendor": 335,
+  "longest_selected_path": "source/tests/fixtures/jilin-disclosures/2411277231b5f83ade95998ed3001841b18d891b2d279935c4400d238c6f3234.html",
+  "runtime_archives": {
+    "python-3.13.16-amd64.zip": {
+      "size": 31153407,
+      "sha256": "bbf675bb5e763c1efbb09a3a461b259d81598a63c30c4b0d7ea11b9f063df159"
+    },
+    "node-v22.23.3-win-x64.zip": {
+      "size": 35574076,
+      "sha256": "2b0ff57b049cda1bbcea2240eec20467018713c1efe1f7360c2681859b90ed71"
+    },
+    "pnpm-11.25.0.tgz": {
+      "size": 5116259,
+      "sha256": "33dd0748f27e7916c4f1c8b6943461983e3453b06bbda6312a6280130b4881e5"
+    }
+  },
+  "wheel_counts": {
+    "wheels-main": 79,
+    "wheels-mcp1": 31,
+    "wheels-dev": 1
+  }
+}

@@ -1,5 +1,11 @@
 # 工程交接：在另一台电脑继续持衡项目
 
+## 2026-10-16 接续入口
+
+Windows核心隔离安装已实测通过，新安装位于“持衡运行 02”；最终候选固定源码 `ccadffa3d7526cc57369d6c3a633d40c54bb08e8`。包内完整离线632项：**625通过、7明确跳过**，JS12/12通过；原生权限、双Python环境、590公开载荷、49来源卡、PDF和三进程合成演练保留均已核验。请先读[最新构建与安装报告](verification/windows-native-2026-10-16/task3-delivery-installation.md)及[结构化摘要](verification/windows-native-2026-10-16/task3-delivery-summary.json)。
+
+真实DOC转换、业务网站登录、宿主MCP/HTTP服务、计划任务及Windows注销重启仍未验，国家库保持blocked；不代表Task5全部完成。原失败安装和首次未采用候选保留。用户已明确要求上传GitHub，截至ccadffa的前三提交已上传既有私有仓库 `codex/windows-native-continuation`；本次文档提交保存经复核的安装验收证据，最终同步以该分支提交记录为准。以下2026-10-11内容为保留的历史交接，不作为当前验收结论。
+
 交接日期：2026-10-11。目标仓库：`Qiu-Shu/chiheng-legal-workbench`，须保持私有。
 
 ## 同日补充：数据资产另行上传

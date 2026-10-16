@@ -1,0 +1,88 @@
+{
+  "status": "complete",
+  "target": "D:\\Documents\\群兴桌面验证\\持衡运行 02",
+  "install_id": "7cfa899a-58b1-4136-bba5-72eebc641d21",
+  "activated": false,
+  "host": {
+    "build": 19045,
+    "machine": "AMD64",
+    "support": "best_effort"
+  },
+  "ready_search": true,
+  "ready_pdf": true,
+  "ready_doc": false,
+  "ready_update": false,
+  "ready_mock_hearing": true,
+  "browser": "pending_native_test",
+  "update": "pending_external_adapter_and_network_test",
+  "autostart": "not_checked",
+  "login_restart_verified": false,
+  "http_ready_verified": false,
+  "port_conflict": false,
+  "errors": [],
+  "runtime": {
+    "system": "Windows",
+    "machine": "AMD64",
+    "version": [
+      3,
+      13,
+      16
+    ],
+    "bits": 64,
+    "utf8": true,
+    "timezone": true,
+    "fts5_trigram": true,
+    "dependencies": {
+      "mcp": true,
+      "yaml": true,
+      "pypdf": true,
+      "pdfplumber": true,
+      "scrapling": true,
+      "httpx": true
+    }
+  },
+  "library": {
+    "ok": true,
+    "versions": 49,
+    "fragment": true,
+    "source_card": true,
+    "raw_file": "data/attachment-preflight/9187980/737400f8178605b2d0ed27c503c7028e75c74fd8c53630f668968438b2b30f97/original.pdf",
+    "mirror": true
+  },
+  "pdf": {
+    "pypdf_text": "Chiheng PDF probe",
+    "pdfplumber_text": "Chiheng PDF probe"
+  },
+  "mock_hearing_output": "test_broad_and_null_acl_rejected_without_repair (tests.test_windows_private.WindowsPrivateNativeTests.test_broad_and_null_acl_rejected_without_repair) ... ok\ntest_directory_creation_retains_parent_through_acl_check (tests.test_windows_private.WindowsPrivateNativeTests.test_directory_creation_retains_parent_through_acl_check) ... ok\ntest_held_parent_blocks_rename_and_releases_on_success_and_error (tests.test_windows_private.WindowsPrivateNativeTests.test_held_parent_blocks_rename_and_releases_on_success_and_error) ... ok\ntest_junction_root_and_material_ancestor_are_rejected (tests.test_windows_private.WindowsPrivateNativeTests.test_junction_root_and_material_ancestor_are_rejected) ... ok\ntest_private_file_acl_and_hardlinks_are_rejected (tests.test_windows_private.WindowsPrivateNativeTests.test_private_file_acl_and_hardlinks_are_rejected) ... ok\ntest_security_failure_never_becomes_file_exists (tests.test_windows_private.WindowsPrivateNativeTests.test_security_failure_never_becomes_file_exists) ... ok\ntest_synthetic_full_hearing_read_append_and_duplicate_preservation (tests.test_windows_private.WindowsPrivateNativeTests.test_synthetic_full_hearing_read_append_and_duplicate_preservation) ... ok\ntest_windows_material_aliases_are_refused (tests.test_windows_private.WindowsPrivateNativeTests.test_windows_material_aliases_are_refused) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.237s\n\nOK\n",
+  "doc": "pending_real_conversion",
+  "external": {
+    "ready_external": false,
+    "flk": {
+      "status": "blocked",
+      "policy": "FLK_ACCESS_BLOCK"
+    },
+    "case": {
+      "status": "pending_local_login_and_auth_search_body"
+    },
+    "host": {
+      "status": "not_checked_scope_no_host_config_read"
+    },
+    "mcp1": {
+      "status": "installed_import_verified",
+      "sdk": "1.28.0",
+      "fastmcp": true,
+      "online_verified": false
+    },
+    "bb_browser": {
+      "status": "installed_native_pending",
+      "dependencies": "network_frozen_lock_ignore_scripts",
+      "browser": "pending_supported_local_browser",
+      "all_commands_verified": false
+    }
+  },
+  "endpoint": "http://127.0.0.1:18063/mcp",
+  "completion_scope": "core_only_external_status_separate",
+  "codex_connection": "manual_import_required",
+  "skills": "bundled_not_imported_into_host",
+  "acceptance_elapsed_seconds": 40.943
+}

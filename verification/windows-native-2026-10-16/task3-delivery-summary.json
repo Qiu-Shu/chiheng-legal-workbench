@@ -1,0 +1,170 @@
+{
+  "date": "2026-10-16",
+  "source_commit": "ccadffa3d7526cc57369d6c3a633d40c54bb08e8",
+  "candidate": {
+    "directory": "D:\\Documents\\群兴桌面验证\\持衡候选\\chiheng-windows10-2026-10-16-phta_8wh",
+    "zip": "D:\\Documents\\群兴桌面验证\\持衡候选\\chiheng-windows10-2026-10-16-phta_8wh\\持衡-Windows10-x64-个人迁移总包.zip",
+    "size": 255563418,
+    "sha256": "7ef614242853903f6130516eafcdd6c53defaf69d03658de56a39db7b3703b88",
+    "bundle": "D:\\Documents\\群兴桌面验证\\持衡候选\\chiheng-windows10-2026-10-16-phta_8wh\\已核验解压\\持衡 Windows10 个人迁移包",
+    "outer_members": 456,
+    "payloads_verified": 455,
+    "current_repository_selected_files_verified": 338,
+    "current_source_files_verified": 192,
+    "public_files_verified": 590,
+    "public_non_database_payloads_identical_to_original": true,
+    "original_core_tables_and_mirror_identity_preserved": true,
+    "source_commit": "ccadffa3d7526cc57369d6c3a633d40c54bb08e8",
+    "target": "D:/Documents/群兴桌面验证/持衡运行 02"
+  },
+  "installation": {
+    "target": "D:\\Documents\\群兴桌面验证\\持衡运行 02",
+    "status": "complete",
+    "activated": false,
+    "elapsed_seconds": 40.943,
+    "main_environment": {
+      "phase": "environment",
+      "target": "D:\\Documents\\群兴桌面验证\\持衡运行 02",
+      "old_source_install_host_reads_blocked": true,
+      "environment": "main",
+      "locked_packages": 79,
+      "mcp": "2.2.0",
+      "python": "3.13.16 (tags/v3.13.16:cbc944f, Sep 30 2026, 19:17:50) [MSC v.1944 64 bit (AMD64)]",
+      "executable": "D:\\Documents\\群兴桌面验证\\持衡运行 02\\.venv\\Scripts\\python.exe",
+      "base_prefix": "D:\\Documents\\群兴桌面验证\\持衡运行 02\\runtime\\python",
+      "mcp_module": "D:\\Documents\\群兴桌面验证\\持衡运行 02\\.venv\\Lib\\site-packages\\mcp\\__init__.py"
+    },
+    "mcp1_environment": {
+      "phase": "environment",
+      "target": "D:\\Documents\\群兴桌面验证\\持衡运行 02",
+      "old_source_install_host_reads_blocked": true,
+      "environment": "mcp1",
+      "locked_packages": 31,
+      "mcp": "1.28.0",
+      "python": "3.13.16 (tags/v3.13.16:cbc944f, Sep 30 2026, 19:17:50) [MSC v.1944 64 bit (AMD64)]",
+      "executable": "D:\\Documents\\群兴桌面验证\\持衡运行 02\\.venv-mcp1\\Scripts\\python.exe",
+      "base_prefix": "D:\\Documents\\群兴桌面验证\\持衡运行 02\\runtime\\python",
+      "mcp_module": "D:\\Documents\\群兴桌面验证\\持衡运行 02\\.venv-mcp1\\Lib\\site-packages\\mcp\\__init__.py"
+    },
+    "pip_check_main_exit": 0,
+    "pip_check_mcp1_exit": 0,
+    "file_identity": {
+      "installed_packaged_files_verified": 338,
+      "python_runtime_files_verified": 3159,
+      "source_commit": "ccadffa3d7526cc57369d6c3a633d40c54bb08e8",
+      "original_public_archive_unchanged": true,
+      "candidate_unchanged": true,
+      "activated": false,
+      "install_id": "7cfa899a-58b1-4136-bba5-72eebc641d21"
+    }
+  },
+  "validation": {
+    "installed_offline": {
+      "tests": 632,
+      "passed": 625,
+      "skipped": 7,
+      "seconds": 79.415,
+      "exit_code": 0
+    },
+    "installed_js_boundary": {
+      "tests": 12,
+      "passed": 12,
+      "exit_code": 0
+    },
+    "doctor_native_private": {
+      "tests": 8,
+      "passed": 8,
+      "skipped": 0,
+      "exit_code": 0
+    },
+    "public_payloads": 590,
+    "source_cards": 49,
+    "fragments": 49,
+    "searches": 49,
+    "database": {
+      "logical_sha256": "82b6a97660190154d5ac72df38e2b2bd817c40f2aa6705e3ea9bb8b74765c3be",
+      "counts": {
+        "versions": 49,
+        "audit": 100,
+        "provenance": 49,
+        "search_index": 49,
+        "published": 0,
+        "withdrawn": 0
+      }
+    },
+    "corpus": {
+      "sha256": "26acddc182e4ecaca66dc48380cd590b8c1a9c2cca177a652bcad01fa78e45ad",
+      "law_versions": 2190,
+      "text_units": 77809,
+      "review_state": "unverified_mirror",
+      "license_evidence": [
+        "data/public-corpus/context/1-README.md"
+      ],
+      "license_status": "observed_documents_only; no redistribution grant inferred",
+      "origin": {
+        "corpus_origin": "existing_china_law_bundle",
+        "upstream": "https://github.com/lawtext/laws",
+        "redistribution": "not_enabled",
+        "purpose": "personal_noncommercial_learning",
+        "scope": "public_law_only",
+        "notice": "复用现存公开法规索引，不复制私有案件；原索引时效标签不等于本项目核验。"
+      }
+    },
+    "process_restart": {
+      "separate_processes": 3,
+      "turns": [
+        1,
+        11,
+        11
+      ],
+      "final_session_sha256": "21f000d2a45e5b4181d858350a9b03c73b7405567b44f8af9c694243d39efd23",
+      "retained": true
+    },
+    "browser_dependencies": {
+      "installed_packages": 14,
+      "unlabeled_licenses": [],
+      "actual_browser_commands_verified": false
+    }
+  },
+  "rejected_first_candidate": {
+    "directory": "D:\\Documents\\群兴桌面验证\\持衡候选\\chiheng-windows10-2026-10-16-yh4o934j",
+    "zip": "D:\\Documents\\群兴桌面验证\\持衡候选\\chiheng-windows10-2026-10-16-yh4o934j\\持衡-Windows10-x64-个人迁移总包.zip",
+    "size": 255562632,
+    "sha256": "1a353fa5ca7d03d3a6a5529d08d4b303f5a4906de2921f3291b250f9457a3e2f",
+    "files": 455,
+    "acceptance": "rejected_incomplete_development_snapshot",
+    "reason": "Missing original scheduler checkpoint; byte differences in six config files and source-context README.",
+    "byte_difference_analysis": {
+      "data/public-corpus/context/1-README.md": {
+        "only_crlf_difference": true
+      },
+      "config/jilin-traffic.json": {
+        "only_crlf_difference": true
+      },
+      "config/official-monitor.json": {
+        "only_crlf_difference": true
+      },
+      "config/jilin-samples.json": {
+        "only_crlf_difference": true
+      },
+      "config/coverage-targets.yaml": {
+        "only_crlf_difference": true
+      },
+      "config/sources.json": {
+        "only_crlf_difference": true
+      },
+      "config/jilin-disclosures.json": {
+        "only_crlf_difference": true
+      }
+    }
+  },
+  "limits": [
+    "Core installation only; no service, scheduled task, host MCP import, actual browser session, business-site login or online legal retrieval started.",
+    "Host configuration check explicitly replaced with not_checked_scope_no_host_config_read in the acceptance harness.",
+    "No real DOC conversion or Windows logout/reboot test; persistence means three separate application processes.",
+    "Offline test guard covers common in-process TCP/asyncio/Fetcher entrypoints, not a system-level network sandbox.",
+    "Source snapshot is ccadffa; this report and plan status update were added after packaging."
+  ],
+  "raw_evidence": ".local/task3-raw-evidence-20261016",
+  "logs": "verification/windows-native-2026-10-16/task3-*.log"
+}

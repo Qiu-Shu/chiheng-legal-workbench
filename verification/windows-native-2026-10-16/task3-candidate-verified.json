@@ -1,0 +1,16 @@
+{
+  "directory": "D:\\Documents\\群兴桌面验证\\持衡候选\\chiheng-windows10-2026-10-16-phta_8wh",
+  "zip": "D:\\Documents\\群兴桌面验证\\持衡候选\\chiheng-windows10-2026-10-16-phta_8wh\\持衡-Windows10-x64-个人迁移总包.zip",
+  "size": 255563418,
+  "sha256": "7ef614242853903f6130516eafcdd6c53defaf69d03658de56a39db7b3703b88",
+  "bundle": "D:\\Documents\\群兴桌面验证\\持衡候选\\chiheng-windows10-2026-10-16-phta_8wh\\已核验解压\\持衡 Windows10 个人迁移包",
+  "outer_members": 456,
+  "payloads_verified": 455,
+  "current_repository_selected_files_verified": 338,
+  "current_source_files_verified": 192,
+  "public_files_verified": 590,
+  "public_non_database_payloads_identical_to_original": true,
+  "original_core_tables_and_mirror_identity_preserved": true,
+  "source_commit": "ccadffa3d7526cc57369d6c3a633d40c54bb08e8",
+  "target": "D:/Documents/群兴桌面验证/持衡运行 02"
+}
