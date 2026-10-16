@@ -1,4 +1,5 @@
 import importlib
+from contextlib import closing
 import json
 import os
 import plistlib
@@ -20,6 +21,9 @@ class MacInstallTests(unittest.TestCase):
         self.assertIsNotNone(importlib.util.find_spec('scripts.install_mac'),
                              'Mac installer must be implemented')
         self.api = importlib.import_module('scripts.install_mac')
+        uid = patch.object(self.api.os, 'getuid', return_value=789, create=True)
+        uid.start()
+        self.addCleanup(uid.stop)
         self.tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)
         self.base = Path(self.tmp.name).resolve()
@@ -70,9 +74,9 @@ class MacInstallTests(unittest.TestCase):
     def test_probe_uses_selected_child_interpreter(self):
         with patch.object(self.api.subprocess, 'run', return_value=subprocess.CompletedProcess(
                 [], 0, json.dumps(self.runtime), '')) as run:
-            result = self.api.probe_runtime(Path('/some path/python3'))
+            result = self.api.probe_runtime(self.base / 'some path/python3')
         self.assertEqual(result, self.runtime)
-        self.assertEqual(run.call_args.args[0][0], '/some path/python3')
+        self.assertEqual(run.call_args.args[0][0], str(self.base / 'some path/python3'))
         self.assertGreater(run.call_args.kwargs['timeout'], 0)
 
     def test_existing_target_is_untouched(self):
@@ -282,8 +286,9 @@ class MacInstallTests(unittest.TestCase):
         restore_library(self.archive(), self.target)
         for source in self.api.ROOT.glob('*.py'):
             (self.target / source.name).write_bytes(source.read_bytes())
-        with sqlite3.connect(self.target / 'data/legal.sqlite3') as db:
+        with closing(sqlite3.connect(self.target / 'data/legal.sqlite3')) as db:
             db.execute('DELETE FROM search_index')
+            db.commit()
         with self.assertRaises(subprocess.CalledProcessError):
             self.api.smoke_library(self.target, sys.executable)
 

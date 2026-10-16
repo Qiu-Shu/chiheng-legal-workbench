@@ -1,0 +1,4 @@
+# Evidence fixtures and pinned browser patches must retain their exact bytes.
+/tests/fixtures/** -text
+/vendor/bb-browser/package/dist/*.js -text
+/vendor/bb-browser/provenance/*.js -text

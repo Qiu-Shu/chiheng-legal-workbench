@@ -10,6 +10,11 @@ class LegacyDocTests(unittest.TestCase):
         source = Path(__file__).resolve().parents[1] / 'data/official-basic-laws/ff808181799def980179b1ab569c1b33/9a29d1fdee3e037dad0704d575efbe1e4af5c05c8fa33989f4d5f61eacdd2b11/original.doc'
         if not source.exists():
             self.skipTest('固定官方原件未随源代码包分发')
+        from local_settings import resolve_soffice
+        try:
+            resolve_soffice()
+        except ValueError as error:
+            self.skipTest('真实 DOC 转换需要本机 LibreOffice：' + str(error))
         docx, direct = self.converter()(source.read_bytes())
         text, _ = extract_docx(docx, '最高人民法院关于适用《中华人民共和国民事诉讼法》审判监督程序若干问题的解释')
         self.assertNotIn('PAGE', text)

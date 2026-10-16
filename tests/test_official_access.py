@@ -14,6 +14,7 @@ from unittest.mock import patch
 from law_discovery import discovery_lines
 from official_monitor import dashboard_lines
 from scripts import check_official_originals, discover_official_laws, ingest_basic_laws, scheduled_update
+from scripts.test_windows_offline import offline_connections
 
 
 CASES = (
@@ -84,7 +85,7 @@ class OfficialAccessTests(unittest.TestCase):
             stack.enter_context(patch.object(module, 'ROOT', root))
             for owner, name in ((module, 'require_treasury'), (ingest_basic_laws, 'LegalStore')):
                 stack.enter_context(patch.object(owner, name, side_effect=AssertionError(name + ' must not run')))
-            stack.enter_context(patch('socket.socket.connect', side_effect=AssertionError('network must not run')))
+            stack.enter_context(offline_connections())
             stack.enter_context(patch.dict(sys.modules, {'client': None, 'httpx': None}))
             try:
                 return asyncio.run(getattr(module, entry)(*args))
@@ -148,14 +149,15 @@ class OfficialAccessTests(unittest.TestCase):
         for path in source.glob('*.py'):
             shutil.copyfile(path, root / path.name)
         (root / 'scripts').mkdir(exist_ok=True)
-        for script in {Path(case[0].__file__) for case in CASES}:
+        for script in {Path(case[0].__file__) for case in CASES} | {source / 'scripts/test_windows_offline.py'}:
             shutil.copyfile(script, root / 'scripts' / script.name)
         script = root / 'scripts' / Path(module.__file__).name
         code = '''import runpy, sys
 from unittest.mock import patch
 sys.path.insert(0, sys.argv[1])
+from scripts.test_windows_offline import offline_connections
 sys.argv = sys.argv[2:]
-with patch('socket.socket.connect', side_effect=AssertionError('network')), \\
+with offline_connections(), \\
      patch('sqlite3.connect', side_effect=AssertionError('database')), \\
      patch.dict(sys.modules, {'client': None, 'httpx': None}):
     from scripts.ingest_basic_laws import batch_targets, public_object_url

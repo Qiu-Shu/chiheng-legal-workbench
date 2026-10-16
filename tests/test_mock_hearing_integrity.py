@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+from tests.platform_fixtures import private_directory
 
 from mock_hearing import append_turn, create_session, load_session
 
@@ -18,7 +19,7 @@ def digest(session):
 class MockHearingIntegrityTests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
-        self.root = Path(self.tmp.name).resolve()
+        self.root = private_directory(Path(self.tmp.name).resolve() / 'case')
         self.path = self.root / 'session.json'
         self.packet = dict(case_id='synthetic', procedure='civil_first_instance',
                            our_role='plaintiff', materials=[], synthetic=True,

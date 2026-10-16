@@ -7,6 +7,7 @@ import sys
 import tempfile
 import types
 import unittest
+from tests.platform_fixtures import symlink
 from unittest.mock import Mock, patch
 
 import library_transfer
@@ -143,6 +144,25 @@ with open(sys.argv[1], 'rb') as stream:
 
 
 class WindowsTransferTests(unittest.TestCase):
+    def test_symlink_fixture_skips_only_known_capability_failures(self):
+        for code in (1, 50, 1314):
+            error = OSError('synthetic missing symlink capability')
+            error.winerror = code
+            link = Mock()
+            link.symlink_to.side_effect = error
+            with self.subTest(code=code), self.assertRaises(unittest.SkipTest):
+                symlink(link, Path('target'))
+
+    def test_symlink_fixture_keeps_other_errors_as_failures(self):
+        for code in (5, 32, 183):
+            error = OSError('synthetic unexpected filesystem failure')
+            error.winerror = code
+            link = Mock()
+            link.symlink_to.side_effect = error
+            with self.subTest(code=code), self.assertRaises(OSError) as raised:
+                symlink(link, Path('target'))
+            self.assertIs(raised.exception, error)
+
     def test_windows_unsafe_names_are_rejected_on_every_export_host(self):
         for name in ('CON', 'nul.json', 'COM1.txt', 'aux', 'LPT9.data', 'com¹.txt',
                      'name.', 'name ', 'bad*name', 'bad?name', 'bad<name', 'bad>name',
@@ -163,18 +183,23 @@ class WindowsTransferTests(unittest.TestCase):
             with self.assertRaises(FileExistsError):
                 library_transfer._rename_directory_no_replace('source', 'target')
 
-    def test_windows_restore_refuses_symlink_and_reparse_ancestry_before_unpack(self):
+    def test_windows_restore_refuses_symlink_ancestry_before_unpack(self):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder).resolve()
             real = root / 'real'
             real.mkdir()
             alias = root / 'alias'
-            alias.symlink_to(real, target_is_directory=True)
+            symlink(alias, real, target_is_directory=True)
             with patch.object(library_transfer.sys, 'platform', 'win32'), \
                     patch.object(library_transfer, '_unpack_verified') as unpack:
                 with self.assertRaisesRegex(ValueError, '[Ss]ymlink|[Rr]eparse'):
                     library_transfer.restore_library('unused.zip', alias / 'new')
                 unpack.assert_not_called()
+
+    def test_windows_restore_refuses_reparse_ancestry_before_unpack(self):
+        with tempfile.TemporaryDirectory() as folder:
+            real = Path(folder).resolve() / 'real'
+            real.mkdir()
             original = Path.lstat
             def reparse(path, *args, **kwargs):
                 if path == real:

@@ -1,4 +1,5 @@
 import copy
+from contextlib import closing
 import hashlib
 import json
 from pathlib import Path
@@ -6,6 +7,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from tests.platform_fixtures import private_directory
 from unittest.mock import patch
 
 import legal_mcp
@@ -21,7 +23,7 @@ class HearingAuditTests(unittest.TestCase):
     def setUp(self):
         temporary = tempfile.TemporaryDirectory()
         self.addCleanup(temporary.cleanup)
-        self.root = Path(temporary.name).resolve()
+        self.root = private_directory(Path(temporary.name).resolve() / 'case')
         self.body = '虚构材料：甲已收款。乙提出异议。😀\n'
         self.material = self.root / 'material.txt'
         self.material.write_text(self.body, encoding='utf-8')
@@ -284,10 +286,8 @@ class HearingAuditTests(unittest.TestCase):
             self.assertEqual(set(self.root.iterdir()), names)
 
     def test_append_law_preserves_audit_and_actual_local_fragment(self):
-        with tempfile.TemporaryDirectory() as directory:
+        with tempfile.TemporaryDirectory() as directory, closing(LegalStore(Path(directory) / 'synthetic.sqlite3')) as store:
             database = Path(directory) / 'synthetic.sqlite3'
-            store = LegalStore(database)
-            self.addCleanup(store.close)
             version = store.add(law_id='synthetic', title='虚构测试法规', text='第一条 测试正文。',
                                 source_url='https://example.org/law', locator='全文', region='CN')
             sources = [dict(claim='仍须核对', version_id=version, offset=0, length=5)]

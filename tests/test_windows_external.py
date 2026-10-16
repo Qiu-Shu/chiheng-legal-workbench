@@ -7,21 +7,26 @@ import subprocess
 import shutil
 import sys
 import tempfile
+import tomllib
 import unittest
 from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 
-# Standalone Mac tests use only the already downloaded pure-Python wheel.
-# On the target, run this suite in .venv-mcp1, where dotenv is installed.
+# Load only dotenv from the separate SDK1 environment, without replacing MCP2.
 try:
     import dotenv
 except ModuleNotFoundError:
+    sdk1 = Path(os.environ.get('CHIHENG_TEST_SDK1_SITE', str(
+        ROOT / '.venv-mcp1' / ('Lib/site-packages' if os.name == 'nt' else
+                              f'lib/python{sys.version_info.major}.{sys.version_info.minor}/site-packages'))))
     wheel = ROOT / 'verification/windows10-2026-10-09/wheels-mcp1/python_dotenv-1.2.2-py3-none-any.whl'
-    if wheel.is_file():
-        sys.path.insert(0, str(wheel))
+    dependency = sdk1 if sdk1.is_dir() else wheel
+    sys.path.insert(0, str(dependency))
+    try:
         import dotenv
-        sys.path.remove(str(wheel))
+    finally:
+        sys.path.remove(str(dependency))
 
 
 class ExternalTests(unittest.TestCase):
@@ -70,7 +75,9 @@ class ExternalTests(unittest.TestCase):
             self.assertEqual(api.host_conflicts(config), ['menglu_rmfyalk'])
             self.assertEqual(config.read_text(), raw)
             fragment = api.connection_fragment(root)
-            self.assertIn(str(root / '.venv-mcp1/Scripts/python.exe'), fragment)
+            servers = tomllib.loads(fragment)['mcp_servers']
+            self.assertEqual({server['command'] for server in servers.values()},
+                             {str(root / '.venv-mcp1/Scripts/python.exe')})
             self.assertIn('windows_case_access.py', fragment)
             self.assertIn('windows_flk_blocked.py', fragment)
 
@@ -110,12 +117,17 @@ class ExternalTests(unittest.TestCase):
             decoy.chmod(0o600)
             private = root / 'private/case-access.env'
             opens = []
-            original = os.open
+            if os.name == 'nt':
+                import windows_private
+                opener, operation = windows_private, 'open_file'
+            else:
+                opener, operation = os, 'open'
+            original = getattr(opener, operation)
             def checked_open(path, *args, **kwargs):
                 opens.append(Path(path))
                 return original(path, *args, **kwargs)
             with patch.object(api, 'CASE_SCRIPTS', scripts), patch.object(api, 'access_path', return_value=private), \
-                    patch.object(os, 'open', side_effect=checked_open), patch.dict(os.environ, {}, clear=True):
+                    patch.object(opener, operation, side_effect=checked_open), patch.dict(os.environ, {}, clear=True):
                 client = api.load_client()
                 self.assertEqual(client.DEFAULT_CREDENTIAL_PATH, private)
                 self.assertEqual(client.client.credential_path, private)

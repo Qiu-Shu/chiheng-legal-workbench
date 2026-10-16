@@ -4,7 +4,8 @@ import tempfile
 import unittest
 from pathlib import Path
 from unittest.mock import patch
-from urllib.parse import unquote, urlsplit
+from urllib.parse import urlsplit
+from urllib.request import url2pathname
 from scripts import export_obsidian_library as exporter
 from scripts.export_obsidian_library import export, MARKER
 
@@ -44,7 +45,7 @@ class ObsidianExportTests(unittest.TestCase):
                 self.assertEqual(parsed.scheme, 'file')
                 self.assertNotIn(' ', link)
                 self.assertNotIn('旧', link)
-                opened_path = Path(unquote(parsed.path))
+                opened_path = Path(url2pathname(parsed.path))
                 self.assertEqual(opened_path.read_text(), '{"historical":true}')
                 opened.add(opened_path.resolve())
             self.assertEqual(opened, expected)

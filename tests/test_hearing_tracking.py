@@ -6,6 +6,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from tests.platform_fixtures import private_directory
 from unittest.mock import patch
 
 import legal_mcp
@@ -22,7 +23,7 @@ class HearingTrackingTests(unittest.TestCase):
     def setUp(self):
         temporary = tempfile.TemporaryDirectory()
         self.addCleanup(temporary.cleanup)
-        self.root = Path(temporary.name).resolve()
+        self.root = private_directory(Path(temporary.name).resolve() / 'case')
         material = self.root / 'material.txt'
         material.write_text('虚构材料。', encoding='utf-8')
         create_session(self.root, dict(case_id='synthetic', procedure='civil_first_instance',

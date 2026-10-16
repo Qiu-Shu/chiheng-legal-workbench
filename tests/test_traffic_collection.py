@@ -1,4 +1,5 @@
 import copy
+from contextlib import closing
 import portable_lock as fcntl
 import hashlib
 import importlib.util
@@ -439,10 +440,8 @@ class TrafficIntegrationSurfaceTests(unittest.TestCase):
         self.assertTrue(_allowed('config/jilin-traffic.json'))
 
     def test_workbook_article_rejected_and_fragment_has_intersecting_coordinates(self):
-        with tempfile.TemporaryDirectory() as tmp:
+        with tempfile.TemporaryDirectory() as tmp, closing(LegalStore(Path(tmp) / 'law.sqlite3')) as store:
             path = Path(tmp) / 'law.sqlite3'
-            store = LegalStore(path)
-            self.addCleanup(store.close)
             text = '第一条 引用法律的文字。\n下一行内容'
             locations = [{'start': 0, 'end': 13, 'sheet': 'Sheet1', 'row': 4, 'cells': [{'source_coordinate': 'C4'}]},
                          {'start': 13, 'end': len(text), 'sheet': 'Sheet1', 'row': 5, 'cells': []}]

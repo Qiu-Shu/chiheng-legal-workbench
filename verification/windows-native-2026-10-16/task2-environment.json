@@ -1,0 +1,46 @@
+{
+  "system": "Windows-10-10.0.19045-SP0",
+  "python": "3.13.16 (tags/v3.13.16:cbc944f, Sep 30 2026, 19:17:50) [MSC v.1944 64 bit (AMD64)]",
+  "main": {
+    "mcp": "2.2.0",
+    "pywin32": "312",
+    "reportlab": "4.4.9",
+    "scrapling": "0.4.15"
+  },
+  "sdk1": {
+    "mcp": "1.28.0"
+  },
+  "database": {
+    "versions": 49,
+    "search_index": 49,
+    "provenance": 49,
+    "audit": 100
+  },
+  "mirror": {
+    "available": true,
+    "corpus_sha256": "26acddc182e4ecaca66dc48380cd590b8c1a9c2cca177a652bcad01fa78e45ad",
+    "law_versions": 2190,
+    "text_units": 77809,
+    "categories": {
+      "修改、废止的决定": 81,
+      "司法解释": 682,
+      "宪法": 7,
+      "法律": 449,
+      "有关法律问题和重大问题的决定（部分）": 185,
+      "修正案": 12,
+      "法律解释": 25,
+      "监察法规": 3,
+      "行政法规": 746
+    },
+    "upstream_statuses": {
+      "未知": 262,
+      "有效": 1534,
+      "已修改": 388,
+      "尚未生效": 6
+    },
+    "review_state": "unverified_mirror",
+    "coverage_complete": false,
+    "notice": "数量为索引版本/文本单元，不等于独立现行法数量或完整法条数量。"
+  },
+  "source_data_files": 582
+}

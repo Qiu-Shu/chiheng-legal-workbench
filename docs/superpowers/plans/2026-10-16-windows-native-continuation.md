@@ -31,9 +31,9 @@
 
 涉及 tests/test_mac_install.py、test_mock_hearing.py、test_hearing_rehearsal.py、test_local_settings.py、test_library_transfer.py、test_windows_portability.py 和实际关联测试。
 
-- [ ] 复用隔离运行时，在源码目录恢复开发用公共资料副本和测试依赖；不指向正在使用的库。
-- [ ] 运行已知缺陷的失败测试，修正实际文件/API故障注入、私有 ACL 夹具和链接能力判断，保留法律/演练业务断言。
-- [ ] 完整 offline 与 JS 边界测试；逐项记录失败/跳过原因和实际分母。
+- [x] 复用隔离运行时，在源码目录恢复开发用公共资料副本和测试依赖；主MCP2与SDK1分开，49版本/100审计、2190镜像/77809单元不变。深路径恢复失败后通过短临时路径恢复；深路径限制另留后续。
+- [x] 保留118项初始RED及37项关联RED，修正实际API故障注入、私有ACL夹具、链接能力判断及实测路径/字节/连接拦截假设，保留法律/演练业务断言。
+- [x] Standards指出Proactor绕过后补2项RED并在异步连接入口修复，完整offline 629项622通过7明确skip，退出0；JS前次12/12通过，退出0。仅测试进程常用TCP/asyncio/Fetcher入口受保护，非系统级联网沙盒。详 `verification/windows-native-2026-10-16/task2-portable-fixtures.md`，其余独立复核与新交付仍在Task3。
 
 ## Task 3 — 新候选、独审与本机交付
 

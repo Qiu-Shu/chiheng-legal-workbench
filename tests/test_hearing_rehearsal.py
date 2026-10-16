@@ -1,12 +1,14 @@
 import copy
 import hashlib
 import json
+import os
 from pathlib import Path
 import stat
 import subprocess
 import sys
 import tempfile
 import unittest
+from tests.platform_fixtures import private_directory, symlink
 from unittest.mock import patch
 
 import mock_hearing
@@ -29,8 +31,8 @@ class HearingRehearsalTests(unittest.TestCase):
         self.root = Path(temporary.name).resolve()
         self.parent = self.root / 'parent'
         self.child = self.root / 'child'
-        self.parent.mkdir(mode=0o700)
-        self.child.mkdir(mode=0o700)
+        private_directory(self.parent)
+        private_directory(self.child)
         self.packet = dict(case_id='synthetic', procedure='civil_first_instance',
                            our_role='plaintiff', synthetic=True, human_review=None,
                            materials=[])
@@ -108,7 +110,8 @@ class HearingRehearsalTests(unittest.TestCase):
         self.assertFalse(hearing_progress(self.child)['tracking_recorded'])
         self.assertEqual((self.packet, self.focus), (packet, focus))
         self.assertNotIn(str(self.root), json.dumps(session))
-        self.assertEqual(stat.S_IMODE((self.child / 'session.json').stat().st_mode), 0o600)
+        if os.name != 'nt':
+            self.assertEqual(stat.S_IMODE((self.child / 'session.json').stat().st_mode), 0o600)
         self.assert_parent_unchanged()
 
     def test_focus_requires_native_nonempty_unique_list_of_nonempty_strings(self):
@@ -189,8 +192,8 @@ class HearingRehearsalTests(unittest.TestCase):
         self.assertEqual(publications, [session])
         self.assert_parent_unchanged()
 
-    def test_fsync_and_link_failure_leave_no_child_session_or_temporary_file(self):
-        for name in ('fsync', 'link'):
+    def test_fsync_and_publish_failure_leave_no_child_session_or_temporary_file(self):
+        for name in ('fsync', 'rename' if os.name == 'nt' else 'link'):
             with self.subTest(name=name), patch('mock_hearing.os.' + name,
                     side_effect=OSError('injected write failure')):
                 with self.assertRaises(OSError):
@@ -221,19 +224,30 @@ class HearingRehearsalTests(unittest.TestCase):
         self.assert_no_child()
         self.assert_parent_unchanged()
 
-    def test_symlink_permissions_and_material_guards_are_retained(self):
+    def test_symlink_guards_are_retained(self):
         alias = self.root / 'alias'
-        alias.symlink_to(self.parent, target_is_directory=True)
+        symlink(alias, self.parent, target_is_directory=True)
         for root, previous in ((alias, self.parent), (self.child, alias)):
             with self.subTest(root=root, previous=previous), self.assertRaises(ValueError):
                 self.rehearse(root=root, previous=previous)
+        symlink(self.child / 'linked.txt', self.parent / 'session.json')
+        packet = {**self.packet, 'materials': [dict(id='M1', relative_path='linked.txt', sha256='0' * 64)]}
+        with self.assertRaises(ValueError):
+            self.rehearse(packet=packet)
+        self.assert_no_child()
+        self.assert_parent_unchanged()
+
+    @unittest.skipIf(os.name == 'nt', 'POSIX mode bits; native Windows DACL rejection is tested separately')
+    def test_broad_directory_permissions_are_rejected_without_chmod(self):
         self.child.chmod(0o755)
         with self.assertRaises(ValueError):
             self.rehearse()
         self.assertEqual(stat.S_IMODE(self.child.stat().st_mode), 0o755)
-        self.child.chmod(0o700)
-        (self.child / 'linked.txt').symlink_to(self.parent / 'session.json')
-        for path in ('linked.txt', '../parent/session.json', str(self.parent / 'session.json')):
+        self.assert_no_child()
+        self.assert_parent_unchanged()
+
+    def test_material_path_guards_are_retained(self):
+        for path in ('../parent/session.json', str(self.parent / 'session.json')):
             packet = {**self.packet, 'materials': [dict(id='M1', relative_path=path, sha256='0' * 64)]}
             with self.subTest(path=path), self.assertRaises(ValueError):
                 self.rehearse(packet=packet)
@@ -295,7 +309,8 @@ class HearingRehearsalTests(unittest.TestCase):
     def test_new_directory_is_created_privately_and_original_init_contract_stays(self):
         fresh = self.root / 'fresh'
         self.rehearse(root=fresh)
-        self.assertEqual(stat.S_IMODE(fresh.stat().st_mode), 0o700)
+        if os.name != 'nt':
+            self.assertEqual(stat.S_IMODE(fresh.stat().st_mode), 0o700)
         ordinary = create_session(self.child, self.packet)
         self.assertNotIn('rehearsal_of', ordinary)
         other = self.root / 'invalid-init'

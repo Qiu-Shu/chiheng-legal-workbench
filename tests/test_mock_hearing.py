@@ -9,6 +9,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from tests.platform_fixtures import private_directory, symlink
 from unittest.mock import patch
 
 
@@ -31,7 +32,7 @@ def append_many(root, count):
 class MockHearingTests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
-        self.root = Path(self.tmp.name).resolve()
+        self.root = private_directory(Path(self.tmp.name).resolve() / 'case')
         self.material = self.root / 'material.txt'
         self.material.write_text('虚构材料：甲向乙主张借款。', encoding='utf-8')
         self.packet = dict(case_id='synthetic-case', procedure='civil_first_instance',
@@ -56,8 +57,9 @@ class MockHearingTests(unittest.TestCase):
         self.assertEqual(session['stage'], 'issues')
         self.assertFalse(session['completed'])
         self.assertEqual(self.packet, original)
-        for name in ('session.json', '.session.lock'):
-            self.assertEqual(stat.S_IMODE((self.root / name).stat().st_mode), 0o600)
+        if os.name != 'nt':
+            for name in ('session.json', '.session.lock'):
+                self.assertEqual(stat.S_IMODE((self.root / name).stat().st_mode), 0o600)
 
     def test_wrong_procedure_role_and_human_signature_are_rejected(self):
         for changes in ({'procedure': 'criminal'}, {'our_role': 'judge'},
@@ -87,8 +89,8 @@ class MockHearingTests(unittest.TestCase):
             create_session(self.root, packet)
 
     def test_material_symlink_and_nested_symlink_are_rejected(self):
-        (self.root / 'link.txt').symlink_to(self.material)
-        (self.root / 'linked').symlink_to(self.root, target_is_directory=True)
+        symlink(self.root / 'link.txt', self.material)
+        symlink(self.root / 'linked', self.root, target_is_directory=True)
         for path in ('link.txt', 'linked/material.txt'):
             packet = copy.deepcopy(self.packet)
             packet['materials'][0]['relative_path'] = path
@@ -97,14 +99,14 @@ class MockHearingTests(unittest.TestCase):
 
     def test_root_session_and_lock_symlinks_are_rejected(self):
         alias = self.root / 'alias'
-        alias.symlink_to(self.root, target_is_directory=True)
+        symlink(alias, self.root, target_is_directory=True)
         with self.assertRaises(ValueError):
             create_session(alias, self.packet)
         for name in ('session.json', '.session.lock'):
             path = self.root / name
             if path.exists():
                 path.unlink()
-            path.symlink_to(self.material)
+            symlink(path, self.material)
             with self.subTest(name=name), self.assertRaises((ValueError, OSError)):
                 create_session(self.root, self.packet)
             self.assertEqual(self.material.read_text(), '虚构材料：甲向乙主张借款。')
@@ -265,7 +267,8 @@ class MockHearingTests(unittest.TestCase):
         self.assertEqual(set(self.root.iterdir()), names)
 
     def test_init_write_failure_does_not_leave_session_or_temporary_file(self):
-        with patch('mock_hearing.os.link', side_effect=OSError('injected disk failure')):
+        operation = 'rename' if os.name == 'nt' else 'link'
+        with patch('mock_hearing.os.' + operation, side_effect=OSError('injected disk failure')):
             with self.assertRaises(OSError):
                 create_session(self.root, self.packet)
         self.assertFalse((self.root / 'session.json').exists())
@@ -275,10 +278,12 @@ class MockHearingTests(unittest.TestCase):
         root = self.root / 'new-case'
         create_session(root, {**self.packet, 'materials': [], 'synthetic': False})
         result = append_turn(root, {**turn(), 'material_ids': []})
-        self.assertEqual(stat.S_IMODE(root.stat().st_mode), 0o700)
+        if os.name != 'nt':
+            self.assertEqual(stat.S_IMODE(root.stat().st_mode), 0o700)
         self.assertFalse(result['turns'][0]['synthetic'])
         self.assertIsNone(result['turns'][0]['human_review'])
 
+    @unittest.skipIf(os.name == 'nt', 'POSIX mode bits; native Windows DACL rejection is tested separately')
     def test_broad_existing_directory_is_rejected_without_chmod(self):
         self.root.chmod(0o755)
         with self.assertRaises(ValueError):

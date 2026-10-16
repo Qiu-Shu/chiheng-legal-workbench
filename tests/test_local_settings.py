@@ -103,7 +103,8 @@ class LocalSettingsTests(unittest.TestCase):
             with patch('os.getcwd', return_value='/'):
                 self.assertEqual(settings.resolve_config_path(config, '../data/index.json'),
                                  config.parent.parent / 'data/index.json')
-            self.assertEqual(settings.resolve_config_path(config, '/tmp/index.json'), Path('/tmp/index.json'))
+            absolute = Path(tmp).resolve() / 'index.json'
+            self.assertEqual(settings.resolve_config_path(config, str(absolute)), absolute)
 
     def test_machine_config_missing_is_optional_and_invalid_values_fail(self):
         settings = self.settings()
@@ -159,8 +160,8 @@ class LocalSettingsTests(unittest.TestCase):
     def test_libreoffice_can_be_discovered_on_path(self):
         settings = self.settings()
         with patch.dict(os.environ, {}, clear=True), patch.object(settings, 'configured_path', return_value=None), \
-                patch.object(settings.shutil, 'which', return_value='/bin/sh'):
-            self.assertEqual(settings.resolve_soffice(), Path('/bin/sh'))
+                patch.object(settings.shutil, 'which', return_value=sys.executable):
+            self.assertEqual(settings.resolve_soffice(), Path(sys.executable))
 
     def test_treasury_optional_until_requested(self):
         settings = self.settings()

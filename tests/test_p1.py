@@ -66,7 +66,7 @@ class P1SkillTests(unittest.TestCase):
             "assets/entrypoint-profile.yaml",
         }
         actual = {
-            str(path.relative_to(SKILL))
+            path.relative_to(SKILL).as_posix()
             for path in SKILL.rglob("*")
             if path.is_file()
         }

@@ -8,6 +8,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from tests.platform_fixtures import symlink
 import zipfile
 from pathlib import Path
 from unittest.mock import patch
@@ -135,7 +136,7 @@ class LibraryTransferTests(unittest.TestCase):
         self.assertFalse(self.archive.exists())
 
     def test_source_symlink_refused(self):
-        (self.root / 'data/quarantine/linked').symlink_to(self.corpus)
+        symlink(self.root / 'data/quarantine/linked', self.corpus)
         with self.assertRaisesRegex(ValueError, '[Ss]ymlink|symbolic|符号'):
             self.export()
 
