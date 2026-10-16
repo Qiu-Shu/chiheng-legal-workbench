@@ -15,7 +15,7 @@ import windows_private as private
 class WindowsPrivatePolicyTests(unittest.TestCase):
     def test_parent_handles_participate_in_delete_sharing_and_close_on_error(self):
         constants = SimpleNamespace(OPEN_EXISTING=3, FILE_SHARE_READ=1, FILE_SHARE_WRITE=2,
-            FILE_FLAG_OPEN_REPARSE_POINT=0x200000, FILE_FLAG_BACKUP_SEMANTICS=0x2000000)
+            FILE_FLAG_BACKUP_SEMANTICS=0x2000000)
         path = private.validate_path(r'C:\parent\child\data')
         for fail_check in (False, True):
             with self.subTest(fail_check=fail_check), ExitStack() as stack:
@@ -25,7 +25,7 @@ class WindowsPrivatePolicyTests(unittest.TestCase):
                 stack.enter_context(patch.object(private, 'ntsecuritycon',
                     SimpleNamespace(FILE_LIST_DIRECTORY=1), create=True))
                 stack.enter_context(patch.object(private, 'win32file',
-                    SimpleNamespace(CreateFile=create), create=True))
+                    SimpleNamespace(CreateFile=create, FILE_FLAG_OPEN_REPARSE_POINT=0x200000), create=True))
                 stack.enter_context(patch.object(private, '_check_object',
                     side_effect=[None, ValueError('unsafe ancestor')] if fail_check else None))
                 if fail_check:
@@ -47,14 +47,14 @@ class WindowsPrivatePolicyTests(unittest.TestCase):
     def test_native_open_contract_same_handle_and_failure_cleanup(self):
         constants = SimpleNamespace(GENERIC_READ=0x80000000, GENERIC_WRITE=0x40000000,
             READ_CONTROL=0x20000, OPEN_EXISTING=3, OPEN_ALWAYS=4, CREATE_NEW=1,
-            FILE_SHARE_READ=1, FILE_SHARE_WRITE=2, FILE_FLAG_OPEN_REPARSE_POINT=0x200000,
+            FILE_SHARE_READ=1, FILE_SHARE_WRITE=2,
             FILE_FLAG_BACKUP_SEMANTICS=0x2000000, FILE_ATTRIBUTE_REPARSE_POINT=1024,
             FILE_ATTRIBUTE_DEVICE=64, FILE_ATTRIBUTE_DIRECTORY=16)
         for failure in (None, 'acl', 'links', 'reparse', 'directory', 'crt'):
             with self.subTest(failure=failure), ExitStack() as stack:
                 handle = MagicMock()
                 handle.__int__.return_value = 123
-                file_api = SimpleNamespace(CreateFile=MagicMock(return_value=handle),
+                file_api = SimpleNamespace(CreateFile=MagicMock(return_value=handle), FILE_FLAG_OPEN_REPARSE_POINT=0x200000,
                     FILE_TYPE_DISK=1, GetFileType=MagicMock(return_value=1),
                     GetFileInformationByHandle=MagicMock(return_value=(
                         1024 if failure == 'reparse' else 16 if failure == 'directory' else 0,
@@ -85,7 +85,7 @@ class WindowsPrivatePolicyTests(unittest.TestCase):
                 handle.Close.assert_called_once()
                 args = file_api.CreateFile.call_args.args
                 self.assertEqual(args[2], 3)  # No delete-sharing while validating.
-                self.assertTrue(args[5] & constants.FILE_FLAG_OPEN_REPARSE_POINT)
+                self.assertTrue(args[5] & file_api.FILE_FLAG_OPEN_REPARSE_POINT)
 
     def test_ancestors_remain_open_through_target_validation_and_crt_transfer(self):
         constants = SimpleNamespace(GENERIC_READ=0x80000000, READ_CONTROL=0x20000,
@@ -130,13 +130,14 @@ class WindowsPrivatePolicyTests(unittest.TestCase):
             def __init__(self, code):
                 self.winerror = code
         constants = SimpleNamespace(FILE_SHARE_READ=1, FILE_SHARE_WRITE=2,
-            FILE_FLAG_OPEN_REPARSE_POINT=0x200000, FILE_FLAG_BACKUP_SEMANTICS=0x2000000)
+            FILE_FLAG_BACKUP_SEMANTICS=0x2000000)
         for code, expected in [(2, FileNotFoundError), (3, FileNotFoundError),
                                (80, FileExistsError), (183, FileExistsError), (5, ApiError)]:
             with self.subTest(code=code), patch.object(private, 'win32con', constants, create=True), \
                     patch.object(private, 'pywintypes', SimpleNamespace(error=ApiError), create=True), \
                     patch.object(private, 'win32file',
-                        SimpleNamespace(CreateFile=MagicMock(side_effect=ApiError(code))), create=True):
+                        SimpleNamespace(CreateFile=MagicMock(side_effect=ApiError(code)),
+                            FILE_FLAG_OPEN_REPARSE_POINT=0x200000), create=True):
                 with self.assertRaises(expected):
                     private._open_handle(r'C:\safe\data', 0, 3)
 

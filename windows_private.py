@@ -88,7 +88,7 @@ def _open_handle(path, access, disposition):
     try:
         return win32file.CreateFile(str(path), access,
             win32con.FILE_SHARE_READ | win32con.FILE_SHARE_WRITE, None, disposition,
-            win32con.FILE_FLAG_OPEN_REPARSE_POINT | win32con.FILE_FLAG_BACKUP_SEMANTICS, None)
+            win32file.FILE_FLAG_OPEN_REPARSE_POINT | win32con.FILE_FLAG_BACKUP_SEMANTICS, None)
     except pywintypes.error as error:
         if error.winerror in (2, 3):
             raise FileNotFoundError(str(path)) from error
