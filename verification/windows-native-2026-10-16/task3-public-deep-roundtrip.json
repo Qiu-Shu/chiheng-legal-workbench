@@ -1,0 +1,43 @@
+{
+  "original_archive_sha256": "50bb70dd01b6432b6fdc946fcf17c8afb075cbf26258edbc6ed460b02c38e791",
+  "original_archive_unchanged": true,
+  "restore_target": "D:\\Documents\\ChatGPT\\律所项目\\.local\\integrations\\chiheng-legal-workbench\\.local\\task3-public-deep-roundtrip-20261016\\公开库 中文 空格 #100%",
+  "files": 590,
+  "longest_ordinary_file_path": 300,
+  "database": {
+    "counts": {
+      "audit": 100,
+      "provenance": 49,
+      "published": 0,
+      "search_index": 49,
+      "versions": 49,
+      "withdrawn": 0
+    },
+    "logical_sha256": "82b6a97660190154d5ac72df38e2b2bd817c40f2aa6705e3ea9bb8b74765c3be"
+  },
+  "corpus": {
+    "law_versions": 2190,
+    "license_evidence": [
+      "data/public-corpus/context/1-README.md"
+    ],
+    "license_status": "observed_documents_only; no redistribution grant inferred",
+    "origin": {
+      "corpus_origin": "existing_china_law_bundle",
+      "notice": "复用现存公开法规索引，不复制私有案件；原索引时效标签不等于本项目核验。",
+      "purpose": "personal_noncommercial_learning",
+      "redistribution": "not_enabled",
+      "scope": "public_law_only",
+      "upstream": "https://github.com/lawtext/laws"
+    },
+    "review_state": "unverified_mirror",
+    "sha256": "26acddc182e4ecaca66dc48380cd590b8c1a9c2cca177a652bcad01fa78e45ad",
+    "text_units": 77809
+  },
+  "ledger_counts": {
+    "data/review-records.jsonl": 1
+  },
+  "reexport_verified": true,
+  "public_payload_hashes_preserved": true,
+  "database_logical_hash_preserved": true,
+  "archive": "D:\\Documents\\ChatGPT\\律所项目\\.local\\integrations\\chiheng-legal-workbench\\.local\\task3-public-deep-roundtrip-20261016\\verified-public-roundtrip.zip"
+}

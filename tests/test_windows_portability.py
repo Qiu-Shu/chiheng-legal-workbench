@@ -200,9 +200,10 @@ class WindowsTransferTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as folder:
             real = Path(folder).resolve() / 'real'
             real.mkdir()
+            native = library_transfer._io_path(real)
             original = Path.lstat
             def reparse(path, *args, **kwargs):
-                if path == real:
+                if path in (real, native):
                     return types.SimpleNamespace(st_mode=0o40700, st_file_attributes=0x400)
                 return original(path, *args, **kwargs)
             with patch.object(library_transfer.sys, 'platform', 'win32'), \

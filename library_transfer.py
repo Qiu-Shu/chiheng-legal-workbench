@@ -16,6 +16,7 @@ import zipfile
 from contextlib import ExitStack, closing, contextmanager
 from datetime import datetime, timezone
 from pathlib import Path
+from urllib.parse import quote
 
 
 MAX_ENTRIES = 100_000
@@ -109,6 +110,25 @@ def _regular(path):
         raise ValueError(f'Not a regular file: {path}')
 
 
+def _io_path(path):
+    path = Path(path).absolute()
+    if os.name != 'nt':
+        return path
+    value = str(path)
+    if value[:8].lower() == '\\\\?\\unc\\':
+        value = '\\\\' + value[8:]
+    elif value.startswith('\\\\?\\'):
+        value = value[4:]
+    if value.startswith('\\\\.\\') or not Path(value).is_absolute():
+        raise ValueError('Unsupported Windows file path')
+    # Extended paths bypass Win32 normalization; normalize lexically, without following links.
+    path = Path(os.path.normpath(value))
+    for part in path.parts[1:]:
+        _safe_name(part)
+    value = str(path)
+    return Path('\\\\?\\' + ('UNC\\' + value[2:] if value.startswith('\\\\') else value))
+
+
 def _source_files(root):
     for part in ('data', 'config', 'verification'):
         if (root / part).is_symlink():
@@ -140,6 +160,7 @@ def _source_files(root):
     corpus = Path(config['corpus_path'])
     if not corpus.is_absolute():
         corpus = root / 'config' / corpus
+    corpus = _io_path(corpus)
     _regular(corpus)
     files[CORPUS_PATH] = corpus
     # Only named public license/origin documents beside the corpus or its source root.
@@ -184,7 +205,9 @@ def _locks(root):
 
 
 def _readonly(path):
-    db = sqlite3.connect(path.resolve().as_uri() + '?mode=ro', uri=True, timeout=5)
+    path = path.resolve()
+    uri = 'file:' + quote(str(path), safe='/\\:') if os.name == 'nt' else path.as_uri()
+    db = sqlite3.connect(uri + '?mode=ro', uri=True, timeout=5)
     db.execute('PRAGMA query_only=ON')
     db.execute('PRAGMA trusted_schema=OFF')
     return db
@@ -329,7 +352,7 @@ def _rename_directory_no_replace(source, target):
 
 def export_library(root, archive):
     """Snapshot public data under writer locks and publish a verified new ZIP."""
-    root, archive = Path(root).absolute(), Path(archive).absolute()
+    root, archive = _io_path(root), _io_path(archive)
     if archive.exists() or archive.is_symlink():
         raise FileExistsError(archive)
     if archive.is_relative_to(root / 'data'):
@@ -436,13 +459,13 @@ def _unpack_verified(archive, target):
 
 def verify_archive(archive):
     """Validate all members and contents without restoring or running anything."""
-    with tempfile.TemporaryDirectory(prefix='library-verify-') as temporary:
-        return _unpack_verified(Path(archive), Path(temporary))
+    with tempfile.TemporaryDirectory(prefix='library-verify-', dir=_io_path(tempfile.gettempdir())) as temporary:
+        return _unpack_verified(_io_path(archive), Path(temporary))
 
 
 def restore_library(archive, target):
     """Restore into a new directory; an existing destination is never changed."""
-    target = Path(target).absolute()
+    target = _io_path(target)
     if sys.platform == 'win32':
         _safe_name(target.name)
         for ancestor in (target, *target.parents):
@@ -457,7 +480,7 @@ def restore_library(archive, target):
     with tempfile.TemporaryDirectory(prefix='.library-restore-', dir=target.parent) as temporary:
         payload = Path(temporary) / 'payload'
         payload.mkdir()
-        manifest = _unpack_verified(Path(archive), payload)
+        manifest = _unpack_verified(_io_path(archive), payload)
         (payload / 'manifest.json').write_bytes(_encoded(manifest))
         _rename_directory_no_replace(payload, target)
         return manifest

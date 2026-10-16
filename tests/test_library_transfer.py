@@ -2,6 +2,7 @@ import portable_lock as fcntl
 import hashlib
 import importlib
 import json
+import shutil
 import sqlite3
 import stat
 import subprocess
@@ -10,6 +11,7 @@ import tempfile
 import unittest
 from tests.platform_fixtures import symlink
 import zipfile
+from contextlib import closing
 from pathlib import Path
 from unittest.mock import patch
 
@@ -339,6 +341,86 @@ class LibraryTransferTests(unittest.TestCase):
             self.assertEqual(first[key], second[key])
         self.assertEqual({k: v for k, v in first['files'].items() if k != 'data/legal.sqlite3'},
                          {k: v for k, v in second['files'].items() if k != 'data/legal.sqlite3'})
+
+    @unittest.skipUnless(sys.platform == 'win32', 'Native Windows long-path transfer')
+    def test_windows_deep_restore_preserves_hashes_and_can_be_exported_again(self):
+        self.export()
+        name = 'data/jilin-samples/traffic/' + 'a' * 64 + '/source-' + 'b' * 64 + '.json'
+        body = b'{"synthetic":true}'
+
+        def add_long_original(rows):
+            for entry, raw in rows:
+                if entry.filename == 'manifest.json':
+                    manifest = json.loads(raw)
+                    manifest['files'][name] = {'size': len(body), 'sha256': hashlib.sha256(body).hexdigest()}
+                    raw = json.dumps(manifest).encode()
+                yield entry, raw
+            yield zipfile.ZipInfo(name), body
+
+        self.rewrite(add_long_original)
+        before = self.archive.read_bytes()
+        for depth in (60, 220):
+            parent = self.base / ('中文 #100% 深目录 ' + 'x' * depth)
+            extended_parent = Path('\\\\?\\' + str(parent.absolute()))
+            extended_parent.mkdir()
+            self.addCleanup(shutil.rmtree, extended_parent)
+            target = parent / '新库'
+            extended = extended_parent / target.name
+            with self.subTest(depth=depth):
+                self.assertGreaterEqual(len(str(target / name)), 260)
+                manifest = self.api.restore_library(self.archive, target)
+                self.assertEqual((extended / name).read_bytes(), body)
+                self.assertEqual(self.archive.read_bytes(), before)
+                with closing(self.api._readonly(extended / 'data/legal.sqlite3')) as db:
+                    db.execute('PRAGMA query_only=OFF')
+                    with self.assertRaisesRegex(sqlite3.OperationalError, 'readonly'):
+                        db.execute('CREATE TABLE forbidden(value)')
+                missing = extended / '缺失 #100%.sqlite3'
+                with self.assertRaises(sqlite3.OperationalError):
+                    self.api._readonly(missing)
+                self.assertFalse(missing.exists())
+                again = self.api.export_library(target, parent / 'deep-again.zip')
+                self.assertEqual(self.api.verify_archive(parent / 'deep-again.zip'), again)
+                self.assertEqual(again['files'][name], manifest['files'][name])
+                self.assertEqual(again['database'], manifest['database'])
+                self.assertEqual(again['corpus'], manifest['corpus'])
+
+    @unittest.skipUnless(sys.platform == 'win32', 'Native Windows long-path transfer')
+    def test_windows_deep_failed_restore_cleans_staging_without_publishing(self):
+        self.export()
+        self.rewrite(lambda rows: [(entry, b'corrupted' if entry.filename.endswith('original.bin') else raw)
+                                  for entry, raw in rows])
+        parent = self.base / ('中文 #100% 深目录 ' + 'x' * 220)
+        extended_parent = Path('\\\\?\\' + str(parent.absolute()))
+        extended_parent.mkdir()
+        self.addCleanup(shutil.rmtree, extended_parent)
+        target = parent / '新库'
+        before = self.archive.read_bytes()
+        with self.assertRaisesRegex(ValueError, 'size/hash|hash mismatch'):
+            self.api.restore_library(self.archive, target)
+        self.assertEqual(list(extended_parent.iterdir()), [])
+        self.assertEqual(self.archive.read_bytes(), before)
+
+    @unittest.skipUnless(sys.platform == 'win32', 'Native Windows junction ancestry')
+    def test_windows_deep_junction_ancestor_is_refused_before_unpack(self):
+        import _winapi
+        parent = self.base / ('中文 深目录 ' + 'x' * 220)
+        extended_parent = Path('\\\\?\\' + str(parent.absolute()))
+        extended_parent.mkdir()
+        self.addCleanup(shutil.rmtree, extended_parent)
+        outside = self.base / 'outside'
+        outside.mkdir()
+        sentinel = outside / 'sentinel'
+        sentinel.write_bytes(b'unchanged')
+        _winapi.CreateJunction(str(outside), str(extended_parent / 'junction'))
+        target = parent / 'junction' / 'new'
+        self.assertGreaterEqual(len(str(target)), 260)
+        with patch.object(self.api, '_unpack_verified') as unpack:
+            with self.assertRaisesRegex(ValueError, '[Rr]eparse|[Ss]ymlink'):
+                self.api.restore_library(self.archive, target)
+            unpack.assert_not_called()
+        self.assertEqual(list(outside.iterdir()), [sentinel])
+        self.assertEqual(sentinel.read_bytes(), b'unchanged')
 
     def test_restore_publication_race_does_not_replace_existing_empty_target(self):
         self.export()
